@@ -1,8 +1,8 @@
 package com.company.service;
 
-import com.company.youtube_demo.entity.EmailEntity;
-import com.company.youtube_demo.enums.EmailType;
-import com.company.youtube_demo.repository.EmailRepository;
+import com.company.entity.EmailEntity;
+import com.company.enums.EmailType;
+import com.company.repository.EmailRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.mail.SimpleMailMessage;
 import org.springframework.mail.javamail.JavaMailSender;

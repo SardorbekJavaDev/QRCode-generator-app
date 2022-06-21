@@ -1,6 +1,6 @@
 package com.company.dto;
 
-import com.company.entity.EmailType;
+import com.company.enums.EmailType;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.Getter;
 import lombok.Setter;

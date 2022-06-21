@@ -1,6 +1,7 @@
 package com.company.QRCode;
 
 import com.company.dto.request.QRCodeRequest;
+import com.company.util.PathUploadAttachUtil;
 import com.google.zxing.EncodeHintType;
 import com.google.zxing.WriterException;
 import com.google.zxing.qrcode.decoder.ErrorCorrectionLevel;
@@ -25,9 +26,9 @@ public class QRCodeGenerator {
     private static String smallEyeColor = "#FfFfFf";
 
 
-    public static void createNewQRCode(QRCodeRequest request){
+    public static void createNewQRCode(QRCodeRequest request) {
         //        https://stackoverflow.com/questions/35419511/generate-qr-codes-with-custom-dot-shapes-using-zxing
-        String pathFolder = PathFolderUtil.getYMDString();
+        String pathFolder = PathUploadAttachUtil.getYMDString();
 
         try {
             generateQRCodeImage(request.getData(), request.getWidth(), request.getHeight(), "./MyQRCode.png", request.getFile());
@@ -52,7 +53,7 @@ public class QRCodeGenerator {
         }
     }
 
-    private static BufferedImage renderQRImage(QRCode code, int width, int height, int quietZone) {
+    public static BufferedImage renderQRImage(QRCode code, int width, int height, int quietZone) {
         BufferedImage image = new BufferedImage(width, height, BufferedImage.TYPE_INT_ARGB);
         Graphics2D graphics = image.createGraphics();
 
@@ -76,7 +77,7 @@ public class QRCodeGenerator {
         int leftPadding = (outputWidth - (inputWidth * multiple)) / 2;
         int topPadding = (outputHeight - (inputHeight * multiple)) / 2;
         final int FINDER_PATTERN_SIZE = 7;
-        final float CIRCLE_SCALE_DOWN_FACTOR = 21f/30f;
+        final float CIRCLE_SCALE_DOWN_FACTOR = 21f / 30f;
         int circleSize = (int) (multiple * CIRCLE_SCALE_DOWN_FACTOR);
 
         for (int inputY = 0, outputY = topPadding; inputY < inputHeight; inputY++, outputY += multiple) {
@@ -99,11 +100,11 @@ public class QRCodeGenerator {
         return image;
     }
 
-    private static void drawFinderPatternCircleStyle(Graphics2D graphics, int x, int y, int circleDiameter) {
-        final int WHITE_CIRCLE_DIAMETER = circleDiameter*5/7;
-        final int WHITE_CIRCLE_OFFSET = circleDiameter/7;
-        final int MIDDLE_DOT_DIAMETER = circleDiameter*3/7;
-        final int MIDDLE_DOT_OFFSET = circleDiameter*2/7;
+    public static void drawFinderPatternCircleStyle(Graphics2D graphics, int x, int y, int circleDiameter) {
+        final int WHITE_CIRCLE_DIAMETER = circleDiameter * 5 / 7;
+        final int WHITE_CIRCLE_OFFSET = circleDiameter / 7;
+        final int MIDDLE_DOT_DIAMETER = circleDiameter * 3 / 7;
+        final int MIDDLE_DOT_OFFSET = circleDiameter * 2 / 7;
 
         graphics.setColor(HexToColor(outerEyeColor));
         graphics.fillOval(x, y, circleDiameter, circleDiameter);
@@ -114,32 +115,19 @@ public class QRCodeGenerator {
     }
 
 
-    public static int[] getRGB(final String rgb)
-    {
-        final int[] ret = new int[3];
-        for (int i = 0; i < 3; i++)
-        {
-            ret[i] = Integer.parseInt(rgb.substring(i * 2, i * 2 + 2), 16);
-        }
-        return ret;
-    }
-
-    public static Color HexToColor(String hex)
-    {
+    public static Color HexToColor(String hex) {
         hex = hex.replace("#", "");
-        switch (hex.length()) {
-            case 6:
-                return new Color(
-                        Integer.valueOf(hex.substring(0, 2), 16),
-                        Integer.valueOf(hex.substring(2, 4), 16),
-                        Integer.valueOf(hex.substring(4, 6), 16));
-            case 8:
-                return new Color(
-                        Integer.valueOf(hex.substring(0, 2), 16),
-                        Integer.valueOf(hex.substring(2, 4), 16),
-                        Integer.valueOf(hex.substring(4, 6), 16),
-                        Integer.valueOf(hex.substring(6, 8), 16));
-        }
-        return null;
+        return switch (hex.length()) {
+            case 6 -> new Color(
+                    Integer.valueOf(hex.substring(0, 2), 16),
+                    Integer.valueOf(hex.substring(2, 4), 16),
+                    Integer.valueOf(hex.substring(4, 6), 16));
+            case 8 -> new Color(
+                    Integer.valueOf(hex.substring(0, 2), 16),
+                    Integer.valueOf(hex.substring(2, 4), 16),
+                    Integer.valueOf(hex.substring(4, 6), 16),
+                    Integer.valueOf(hex.substring(6, 8), 16));
+            default -> null;
+        };
     }
 }

@@ -1,7 +1,7 @@
 package com.company.util;
 
 import com.company.dto.UserJWTDTO;
-import com.company.exp.AppBadRequestException;
+import com.company.exception.AppBadRequestException;
 import io.jsonwebtoken.*;
 
 import java.util.Date;

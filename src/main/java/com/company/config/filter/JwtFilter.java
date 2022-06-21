@@ -2,7 +2,7 @@ package com.company.config.filter;
 
 import com.company.config.details.CustomUserDetails;
 import com.company.dto.UserJWTDTO;
-import com.company.exp.AppBadRequestException;
+import com.company.exception.AppBadRequestException;
 import com.company.service.details.CustomUserDetailsService;
 import com.company.util.JwtUtil;
 import lombok.RequiredArgsConstructor;

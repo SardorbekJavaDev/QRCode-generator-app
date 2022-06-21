@@ -27,7 +27,7 @@ public class Main {
 //        https://stackoverflow.com/questions/35419511/generate-qr-codes-with-custom-dot-shapes-using-zxing
 
         try {
-            generateQRCodeImage("https://www.google.com", 300, 300, "./MyQRCode.png");
+            generateQRCodeImage("https://www.google.com", 300, 300, "./MyQRCode1.jpeg");
         } catch (Exception e) {
             e.printStackTrace();
         }

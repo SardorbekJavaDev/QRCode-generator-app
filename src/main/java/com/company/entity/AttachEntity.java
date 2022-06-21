@@ -3,8 +3,10 @@ package com.company.entity;
 import lombok.Getter;
 import lombok.Setter;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Table;
+import javax.validation.constraints.NotBlank;
 import java.time.LocalDateTime;
 
 @Setter
@@ -12,9 +14,17 @@ import java.time.LocalDateTime;
 @Entity
 @Table(name = "attach")
 public class AttachEntity extends BaseEntity {
-    private String id;
-    private String path;
+
+    @Column
     private String extension;
-    private String origenName;
+
+    @Column
+    private String path;
+
+    @Column(name = "origin_name")
+    private String originName;
+
+    @Column
     private Long size;
+
 }

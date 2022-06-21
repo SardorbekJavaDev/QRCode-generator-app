@@ -14,6 +14,7 @@ public class QRCodeRequest {
     private int width;
     private int height;
     private boolean save;
-    private String file;
+    private String extension;
+    private String logoAttachId;
 
 }

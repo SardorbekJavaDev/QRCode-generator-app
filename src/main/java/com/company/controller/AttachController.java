@@ -7,6 +7,7 @@ import io.swagger.annotations.ApiOperation;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.io.Resource;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -42,4 +43,10 @@ public class AttachController {
         return ResponseEntity.ok(attachService.delete(key));
     }
 
+    @ApiOperation(value = "delete by key", notes = "Method used for delete attach by key")
+    @GetMapping("/download/{key}")
+    public ResponseEntity<Resource> download(@PathVariable("key") String key) {
+        log.info("Attach download {}{}", key, AttachController.class);
+        return attachService.download(key);
+    }
 }

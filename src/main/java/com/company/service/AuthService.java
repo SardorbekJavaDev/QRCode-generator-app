@@ -1,15 +1,18 @@
 package com.company.service;
 
 import com.company.dto.RegistrationDTO;
+import com.company.dto.UserJWTDTO;
 import com.company.dto.request.AuthRequestDTO;
 import com.company.dto.response.UserResponseDTO;
 import com.company.entity.UserEntity;
 import com.company.enums.UserRole;
 import com.company.enums.UserStatus;
-import com.company.exp.AppBadRequestException;
-import com.company.exp.AppForbiddenException;
-import com.company.exp.PasswordOrEmailWrongException;
+import com.company.exception.AppBadRequestException;
+import com.company.exception.AppForbiddenException;
+import com.company.exception.EmailAlreadyExistsException;
+import com.company.exception.PasswordOrEmailWrongException;
 import com.company.repository.UserRepository;
+import com.company.util.JwtUtil;
 import io.jsonwebtoken.JwtException;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.codec.digest.DigestUtils;
@@ -55,7 +58,7 @@ public class AuthService {
         profile.setStreet(entity.getStreet());
         profile.setWebsite(entity.getWebsite());
         profile.setZipCode(entity.getZipCode());
-        profile.setJwt(JwtUtil.encode(entity.getId(), entity.getRole()));
+        profile.setJwt(JwtUtil.encode(entity.getEmail()));
         return profile;
     }
 
@@ -96,13 +99,13 @@ public class AuthService {
     }
 
     public void verification(String jwt) {
-        String userId = null;
+        UserJWTDTO user = null;
         try {
-            userId = JwtUtil.decodeAndGetId(jwt);
+            user = JwtUtil.decode(jwt);
         } catch (JwtException e) {
             throw new AppBadRequestException("Verification not completed");
         }
 
-        userRepository.updateStatus(UserStatus.ACTIVE, userId);
+        userRepository.updateStatus(UserStatus.ACTIVE, user.getEmail());
     }
 }

@@ -2,6 +2,7 @@ package com.company.controller;
 
 import com.company.dto.request.QRCodeRequest;
 import com.company.dto.response.AttachResponseDTO;
+import com.company.dto.response.QRCodeResponse;
 import com.company.service.QRCService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -25,7 +26,7 @@ public class QRCodeController {
     @ApiOperation(value = "Create Category", notes = "Method used for Create Category")
 //    @PreAuthorize("hasRole('USER')")
     @PostMapping("")
-    public ResponseEntity<AttachResponseDTO> create(@RequestBody @Valid QRCodeRequest dto) {
+    public ResponseEntity<QRCodeResponse> create(@RequestBody @Valid QRCodeRequest dto) {
         log.info("Category Create {}{}", dto, QRCodeController.class);
         return ResponseEntity.ok(qrcService.create(dto));
     }

@@ -1,5 +1,6 @@
 package com.company.entity;
 
+import com.company.enums.EmailType;
 import lombok.Getter;
 import lombok.Setter;
 
