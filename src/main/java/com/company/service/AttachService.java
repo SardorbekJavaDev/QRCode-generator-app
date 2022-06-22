@@ -5,8 +5,8 @@ import com.company.entity.AttachEntity;
 import com.company.exception.AppBadRequestException;
 import com.company.exception.ItemNotFoundException;
 import com.company.repository.AttachRepository;
-import com.company.util.PathUploadAttachUtil;
 import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.io.Resource;
 import org.springframework.core.io.UrlResource;
 import org.springframework.http.HttpHeaders;
@@ -20,18 +20,22 @@ import java.net.MalformedURLException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.Calendar;
 
 
 @Service
 @RequiredArgsConstructor
 public class AttachService {
-    private final AttachRepository attachRepository;
-    private final PathUploadAttachUtil uploadAttachUtil;
 
+    @Value("${attach.upload.folder}")
+    private String uploadFolder;
+    @Value("${server.domain.name}")
+    private String domainName;
+    private final AttachRepository attachRepository;
 
     public AttachResponseDTO upload(MultipartFile file) {
-        String pathFolder = uploadAttachUtil.getYMDString();
-        File folder = new File(uploadAttachUtil.getUploadFolder() + pathFolder);
+        String pathFolder = getYMDString();
+        File folder = new File(getUploadFolder() + pathFolder);
         if (!folder.exists()) {
             folder.mkdirs();
         }
@@ -41,7 +45,7 @@ public class AttachService {
 
         try {
             byte[] bytes = file.getBytes();
-            Path path = Paths.get(uploadAttachUtil.getUploadFolder() + pathFolder + "/" + entity.getId() + "." + extension);
+            Path path = Paths.get(getUploadFolder() + pathFolder + "/" + entity.getId() + "." + extension);
             Files.write(path, bytes);
         } catch (IOException e) {
             throw new RuntimeException(e);
@@ -64,7 +68,7 @@ public class AttachService {
         try {
             AttachEntity entity = getById(id);
             String path = entity.getPath() + "/" + id + "." + entity.getExtension();
-            Path file = Paths.get(uploadAttachUtil.getUploadFolder() + path);
+            Path file = Paths.get(getUploadFolder() + path);
             data = Files.readAllBytes(file);
             return data;
         } catch (IOException e) {
@@ -77,7 +81,7 @@ public class AttachService {
         try {
             AttachEntity entity = getById(id);
             String path = entity.getPath() + "/" + id + "." + entity.getExtension();
-            Path file = Paths.get(uploadAttachUtil.getUploadFolder() + path);
+            Path file = Paths.get(getUploadFolder() + path);
             Resource resource = new UrlResource(file.toUri());
 
             if (resource.exists() || resource.isReadable()) {
@@ -95,7 +99,7 @@ public class AttachService {
     public Boolean delete(String key) {
         AttachEntity entity = getById(key);
 
-        File file = new File(uploadAttachUtil.getUploadFolder() + entity.getPath() +
+        File file = new File(getUploadFolder() + entity.getPath() +
                 "/" + entity.getId() + "." + entity.getExtension());
 
         if (file.delete()) {
@@ -121,15 +125,37 @@ public class AttachService {
         dto.setId(entity.getId());
         dto.setCreatedDate(entity.getCreatedDate());
         dto.setOrigenName(entity.getOriginName());
-        dto.setUrl(uploadAttachUtil.getDownloadURL(entity.getId()));
+        dto.setUrl(getDownloadURL(entity.getId()));
         dto.setSize(entity.getSize());
         return dto;
     }
 
-    public String toOpenURL(String id) {
-        return uploadAttachUtil.getOpenURL(id);
+
+    //*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+
+    public String getYMDString() {
+        int year = Calendar.getInstance().get(Calendar.YEAR);
+        int month = Calendar.getInstance().get(Calendar.MONTH) + 1;
+        int day = Calendar.getInstance().get(Calendar.DATE);
+
+        return year + "/" + month + "/" + day; // 2022/04/23
     }
 
+    public String getUploadFolder() {
+        return uploadFolder;
+    }
+
+    public String getDomainName() {
+        return domainName;
+    }
+
+    public String getOpenURL(String id) {
+        return domainName + "/attach/open_general/" + id;
+    }
+
+    public String getDownloadURL(String id) {
+        return domainName + "/attach/download/" + id;
+    }
 
 
 }

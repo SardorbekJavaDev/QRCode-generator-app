@@ -8,15 +8,15 @@ import java.util.Date;
 
 public class JwtUtil {
 
-    private final static String secretKey = "kalitso'z";
+    private final static String secretKey = "SecretKeyQWERTY12345";
 
     public static String encode(String email) {
         JwtBuilder jwtBuilder = Jwts.builder();
         jwtBuilder.setSubject(email);
         jwtBuilder.setIssuedAt(new Date());
         jwtBuilder.signWith(SignatureAlgorithm.HS256, secretKey);
-//        jwtBuilder.setExpiration(new Date(System.currentTimeMillis() + (60 * 60 * 1000 * 24)));
-        jwtBuilder.setIssuer("mazgi production");
+        jwtBuilder.setExpiration(new Date(System.currentTimeMillis() + (1000 * 3600 * 24)));
+        jwtBuilder.setIssuer("Useful Codes production");
 
         return jwtBuilder.compact();
     }

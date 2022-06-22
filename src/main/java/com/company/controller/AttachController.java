@@ -6,21 +6,19 @@ import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.Resource;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
+@Slf4j
 @RestController
 @RequiredArgsConstructor
 @RequestMapping("/api/v1/attach")
-@Slf4j
 @Api("Attach")
 public class AttachController {
-    @Autowired
-    private AttachService attachService;
+    private final AttachService attachService;
 
     @ApiOperation(value = "upload Attach", notes = "Method used for upload Attach")
     @PostMapping("/public")

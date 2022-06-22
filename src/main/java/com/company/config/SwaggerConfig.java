@@ -36,7 +36,7 @@ public class SwaggerConfig {
 
 
     private ApiInfo apiDetails() {
-        return new ApiInfo("Cibo",
+        return new ApiInfo("QRCODE GENERATOR",
                 "Api documentation for QRCode Project",
                 "1.0",
                 "https://t.me/Sardorbek_Rakhmatjonov",

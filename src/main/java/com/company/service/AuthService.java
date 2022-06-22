@@ -14,22 +14,23 @@ import com.company.exception.PasswordOrEmailWrongException;
 import com.company.repository.UserRepository;
 import com.company.util.JwtUtil;
 import io.jsonwebtoken.JwtException;
+import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.codec.digest.DigestUtils;
-import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 import java.util.Optional;
 
 @Slf4j
 @Service
+@RequiredArgsConstructor
 public class AuthService {
-    @Autowired
-    private UserRepository userRepository;
-    @Autowired
-    private AttachService attachService;
-    @Autowired
-    private EmailService emailService;
+    @Value("${user.verification.url}")
+    private String verificationUrl;
+
+    private final UserRepository userRepository;
+    private final AttachService attachService;
 
     public UserResponseDTO login(AuthRequestDTO dto) {
         String pswd = DigestUtils.md5Hex(dto.getPassword());
@@ -76,27 +77,15 @@ public class AuthService {
         entity.setPassword(pswd);
 
         entity.setRole(UserRole.USER);
-        entity.setStatus(UserStatus.NOT_ACTIVE);
+        entity.setStatus(UserStatus.ACTIVE);
         userRepository.save(entity);
 
-        // >>>>>>>>>>>>>>>>>
-        Thread thread = new Thread() {
-            @Override
-            public void run() {
-                sendVerificationEmail(entity);
-            }
-        };
-        thread.start();
-        return "Confirm your email address !";
-    }
-
-    private void sendVerificationEmail(UserEntity entity) {
         StringBuilder builder = new StringBuilder();
         String jwt = JwtUtil.encode(entity.getId());
-        builder.append("To verify your registration click to next link.");
-        builder.append("http://localhost:8080/auth/verification/").append(jwt);
-        emailService.send(entity.getEmail(), "Activate Your Registration", builder.toString());
+        builder.append(verificationUrl).append(jwt);
+        return "Activate Your Registration " + builder;  // we used activation via 'response'
     }
+
 
     public void verification(String jwt) {
         UserJWTDTO user = null;

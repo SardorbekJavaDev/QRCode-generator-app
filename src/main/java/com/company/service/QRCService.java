@@ -8,7 +8,6 @@ import com.company.entity.QRCodeEntity;
 import com.company.enums.QRCodeStatus;
 import com.company.exception.WrongFileFormatException;
 import com.company.repository.QRCodeRepository;
-import com.company.util.PathUploadAttachUtil;
 import com.google.zxing.EncodeHintType;
 import com.google.zxing.WriterException;
 import com.google.zxing.qrcode.decoder.ErrorCorrectionLevel;
@@ -29,7 +28,7 @@ import java.util.Map;
 public class QRCService {
     private final EntityDetails entityDetails;
     private final QRCodeRepository qrCodeRepository;
-    private final PathUploadAttachUtil uploadAttachUtil;
+    private final AttachService attachService;
 
     public QRCodeResponse create(QRCodeRequest dto) {
         String extension = dto.getExtension();
@@ -46,7 +45,7 @@ public class QRCService {
         entity.setData(dto.getData());
         entity.setUserId(entityDetails.getUserEntity().getId());
         entity.setAttachId(dto.getLogoAttachId());
-        entity.setPath(uploadAttachUtil.getUploadFolder());
+        entity.setPath(attachService.getUploadFolder());
         entity.setExtension(dto.getExtension());
         entity.setStatus(QRCodeStatus.ACTIVE);
         entity.setVisible(true);
@@ -54,9 +53,9 @@ public class QRCService {
 
         try {
             code = Encoder.encode(dto.getData(), ErrorCorrectionLevel.H, encodingHints);
-            String path = uploadAttachUtil.getUploadFolder() + uploadAttachUtil.getYMDString() + "/" + entity.getId() + "." + extension;
+            String path = attachService.getUploadFolder() + attachService.getYMDString() + "/" + entity.getId() + "." + extension;
 
-            BufferedImage image = QRCodeGenerator.renderQRImage(code, dto.getWidth(), dto.getHeight(), 4);
+            BufferedImage image = QRCodeGenerator.renderQRImage(code, dto.getColorConfig(), dto.getWidth(), dto.getHeight(), 4);
 
             ImageIO.write(image, extension, new File(path));
 
@@ -74,7 +73,7 @@ public class QRCService {
         dto.setSize(entity.getSize());
         dto.setStatus(entity.getStatus().toString());
         dto.setFile(entity.getExtension());
-        dto.setUrl(uploadAttachUtil.getDownloadURL(entity.getId()));
+        dto.setUrl(attachService.getDownloadURL(entity.getId()));
         return dto;
     }
 }

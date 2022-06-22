@@ -1,66 +1,24 @@
 package com.company.QRCode;
 
-import com.company.dto.request.QRCodeRequest;
-import com.company.util.PathUploadAttachUtil;
-import com.google.zxing.EncodeHintType;
-import com.google.zxing.WriterException;
-import com.google.zxing.qrcode.decoder.ErrorCorrectionLevel;
+import com.company.dto.request.EyeColorConfig;
+import com.company.dto.request.QRCodeColorConfig;
 import com.google.zxing.qrcode.encoder.ByteMatrix;
-import com.google.zxing.qrcode.encoder.Encoder;
 import com.google.zxing.qrcode.encoder.QRCode;
 
-import javax.imageio.ImageIO;
 import java.awt.*;
 import java.awt.image.BufferedImage;
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.util.HashMap;
-import java.util.Map;
 
 public class QRCodeGenerator {
-    private static String backgroundColor = "#FFFFFF";
-    private static String pointColor = "#000000";
-    private static String outerEyeColor = "#909090";
-    private static String mediumEyeColor = "#FFFFFF";
-    private static String smallEyeColor = "#FfFfFf";
 
 
-    public static void createNewQRCode(QRCodeRequest request) {
-        //        https://stackoverflow.com/questions/35419511/generate-qr-codes-with-custom-dot-shapes-using-zxing
-        String pathFolder = PathUploadAttachUtil.getYMDString();
-
-        try {
-            generateQRCodeImage(request.getData(), request.getWidth(), request.getHeight(), "./MyQRCode.png", request.getFile());
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-
-    }
-
-    private static void generateQRCodeImage(String text, int width, int height, String filePath, String formatName) throws WriterException, IOException, RuntimeException {
-        final Map<EncodeHintType, Object> encodingHints = new HashMap<>();
-        encodingHints.put(EncodeHintType.CHARACTER_SET, "UTF-8");
-        QRCode code = Encoder.encode(text, ErrorCorrectionLevel.H, encodingHints);
-        BufferedImage image = renderQRImage(code, width, height, 4);
-
-        try (FileOutputStream stream = new FileOutputStream(filePath)) {
-//            stream.write(bufferedImageToBytes(image));
-            ImageIO.write(image, formatName, new File(filePath));
-
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-    }
-
-    public static BufferedImage renderQRImage(QRCode code, int width, int height, int quietZone) {
+    public static BufferedImage renderQRImage(QRCode code, QRCodeColorConfig colorConfig, int width, int height, int quietZone) {
         BufferedImage image = new BufferedImage(width, height, BufferedImage.TYPE_INT_ARGB);
         Graphics2D graphics = image.createGraphics();
 
         graphics.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
-        graphics.setBackground(HexToColor(backgroundColor));
+        graphics.setBackground(HexToColor(colorConfig.getBgColor()));
         graphics.clearRect(0, 0, width, height);
-        graphics.setColor(HexToColor(pointColor));
+        graphics.setColor(HexToColor(colorConfig.getPointColor()));
 
         ByteMatrix input = code.getMatrix();
         if (input == null) {
@@ -93,24 +51,24 @@ public class QRCodeGenerator {
         }
 
         int circleDiameter = multiple * FINDER_PATTERN_SIZE;
-        drawFinderPatternCircleStyle(graphics, leftPadding, topPadding, circleDiameter);
-        drawFinderPatternCircleStyle(graphics, leftPadding + (inputWidth - FINDER_PATTERN_SIZE) * multiple, topPadding, circleDiameter);
-        drawFinderPatternCircleStyle(graphics, leftPadding, topPadding + (inputHeight - FINDER_PATTERN_SIZE) * multiple, circleDiameter);
+        drawFinderPatternCircleStyle(graphics,colorConfig.getEye1(), leftPadding, topPadding, circleDiameter);
+        drawFinderPatternCircleStyle(graphics, colorConfig.getEye2(), leftPadding + (inputWidth - FINDER_PATTERN_SIZE) * multiple, topPadding, circleDiameter);
+        drawFinderPatternCircleStyle(graphics, colorConfig.getEye3(), leftPadding, topPadding + (inputHeight - FINDER_PATTERN_SIZE) * multiple, circleDiameter);
 
         return image;
     }
 
-    public static void drawFinderPatternCircleStyle(Graphics2D graphics, int x, int y, int circleDiameter) {
+    public static void drawFinderPatternCircleStyle(Graphics2D graphics, EyeColorConfig colorConfig, int x, int y, int circleDiameter) {
         final int WHITE_CIRCLE_DIAMETER = circleDiameter * 5 / 7;
         final int WHITE_CIRCLE_OFFSET = circleDiameter / 7;
         final int MIDDLE_DOT_DIAMETER = circleDiameter * 3 / 7;
         final int MIDDLE_DOT_OFFSET = circleDiameter * 2 / 7;
 
-        graphics.setColor(HexToColor(outerEyeColor));
+        graphics.setColor(HexToColor(colorConfig.getOuter()));
         graphics.fillOval(x, y, circleDiameter, circleDiameter);
-        graphics.setColor(HexToColor(mediumEyeColor));
+        graphics.setColor(HexToColor(colorConfig.getMedium()));
         graphics.fillOval(x + WHITE_CIRCLE_OFFSET, y + WHITE_CIRCLE_OFFSET, WHITE_CIRCLE_DIAMETER, WHITE_CIRCLE_DIAMETER);
-        graphics.setColor(HexToColor(smallEyeColor));
+        graphics.setColor(HexToColor(colorConfig.getSmall()));
         graphics.fillOval(x + MIDDLE_DOT_OFFSET, y + MIDDLE_DOT_OFFSET, MIDDLE_DOT_DIAMETER, MIDDLE_DOT_DIAMETER);
     }
 

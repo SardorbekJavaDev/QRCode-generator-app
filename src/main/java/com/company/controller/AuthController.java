@@ -14,9 +14,9 @@ import javax.validation.Valid;
 
 @Slf4j
 @RestController
+@RequiredArgsConstructor
 @RequestMapping("/api/v1/auth")
 @Api(tags = "Auth")
-@RequiredArgsConstructor
 public class AuthController {
     private final AuthService authService;
 
@@ -31,8 +31,7 @@ public class AuthController {
     @PostMapping("/registration")
     public ResponseEntity<?> registration(@RequestBody @Valid RegistrationDTO dto) {
         log.info("Registration: {}{}", dto, AuthService.class);
-        authService.registration(dto);
-        return ResponseEntity.ok().build();
+        return ResponseEntity.ok(authService.registration(dto));
     }
 
     @ApiOperation(value = "user verification", notes = "Method used for user verification")
