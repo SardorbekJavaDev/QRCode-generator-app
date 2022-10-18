@@ -35,7 +35,7 @@ public class AttachService {
 
     public AttachResponseDTO upload(MultipartFile file) {
         String pathFolder = getYMDString();
-        File folder = new File(getUploadFolder() + pathFolder);
+        File folder = new File(uploadFolder + pathFolder);
         if (!folder.exists()) {
             folder.mkdirs();
         }
@@ -45,7 +45,7 @@ public class AttachService {
 
         try {
             byte[] bytes = file.getBytes();
-            Path path = Paths.get(getUploadFolder() + pathFolder + "/" + entity.getId() + "." + extension);
+            Path path = Paths.get(uploadFolder + pathFolder + "/" + entity.getId() + "." + extension);
             Files.write(path, bytes);
         } catch (IOException e) {
             throw new RuntimeException(e);
@@ -68,7 +68,7 @@ public class AttachService {
         try {
             AttachEntity entity = getById(id);
             String path = entity.getPath() + "/" + id + "." + entity.getExtension();
-            Path file = Paths.get(getUploadFolder() + path);
+            Path file = Paths.get(uploadFolder + path);
             data = Files.readAllBytes(file);
             return data;
         } catch (IOException e) {
@@ -81,7 +81,7 @@ public class AttachService {
         try {
             AttachEntity entity = getById(id);
             String path = entity.getPath() + "/" + id + "." + entity.getExtension();
-            Path file = Paths.get(getUploadFolder() + path);
+            Path file = Paths.get(uploadFolder + path);
             Resource resource = new UrlResource(file.toUri());
 
             if (resource.exists() || resource.isReadable()) {
@@ -99,7 +99,7 @@ public class AttachService {
     public Boolean delete(String key) {
         AttachEntity entity = getById(key);
 
-        File file = new File(getUploadFolder() + entity.getPath() +
+        File file = new File(uploadFolder + entity.getPath() +
                 "/" + entity.getId() + "." + entity.getExtension());
 
         if (file.delete()) {
@@ -141,9 +141,6 @@ public class AttachService {
         return year + "/" + month + "/" + day; // 2022/04/23
     }
 
-    public String getUploadFolder() {
-        return uploadFolder;
-    }
 
     public String getDomainName() {
         return domainName;

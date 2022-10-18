@@ -1,2 +1,36 @@
-POST https://qrcode-monkey.p.rapidapi.com/qr/custom
+
+###
+POST http://localhost:8899/api/v1/qrcode/
 Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhbGlzYXRva2FldkBnbWFpbC5jb20iLCJpYXQiOjE2NjYwODk1MjgsImV4cCI6MTY2NjE3NTkyOCwiaXNzIjoiVXNlZnVsIENvZGVzIHByb2R1Y3Rpb24ifQ.B24Kqn927ISL-8XLr5_n6-6G1DAuisaCvR-qOVdHjJU
+
+{
+  "colorConfig": {
+    "bgColor": "#000000",
+    "eye1": {
+      "medium": "#000000",
+      "outer": "#ffffff",
+      "small": "#ffffff"
+    },
+    "eye2": {
+      "medium": "#000000",
+      "outer": "#ffffff",
+      "small": "#ffffff"
+    },
+    "eye3": {
+      "medium": "#000000",
+      "outer": "#ffffff",
+      "small": "#ffffff"
+    },
+    "pointColor": "#ffffff"
+  },
+  "data": "Assalomu Alaykum",
+  "extension": "png",
+  "height": 400,
+  "logoAttachId": "string",
+  "save": true,
+  "width": 400
+}
+
+###
+GET http://localhost:8899/attach/download/8613b3ff-a785-410a-9e45-2c1c08ef5de1

@@ -1,24 +1,23 @@
-###
-# Registration
+### # Registration
+
 POST http://localhost:8899/api/v1/auth/registration
 Content-Type: application/json
 
 {
-  "name":"Sardorbek",
-  "surname":"Yorqulov",
-  "email":"sardorbekyorqulov1@gmail.com",
+  "name":"Alisa",
+  "surname":"Tokaev",
+  "email":"alisatokaev@gmail.com",
   "password":"123456"
 }
 
-###
-GET http://localhost:8899/api/v1/auth/verification/eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIzNGMxMWEyYy1lNGJlLTRmODEtYWNjZS1kNTE1NDFkNjA5MjciLCJpYXQiOjE2NTU4NjIwNTMsImlzcyI6Im1hemdpIHByb2R1Y3Rpb24ifQ.BvgHa7YX3wL56wHnFiunIm_nKSt4jjjY9C1GcQAnrjc
+### # Verification
+GET http://localhost:8899/api/v1/auth/verification/eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhbGlzYXRva2FldkBnbWFpbC5jb20iLCJpYXQiOjE2NjYwODgyMTQsImV4cCI6MTY2NjE3NDYxNCwiaXNzIjoiVXNlZnVsIENvZGVzIHByb2R1Y3Rpb24ifQ.7qaz1-B0QQVEMLSWjNBNAH3QMYvHIwuKmxx_tZpS8Ac
 
-###
-# Login
+### # Login
 POST http://localhost:8899/api/v1/auth/login
 Content-Type: application/json
 
 {
-  "email":"sardorbekyorqulov1@gmail.com",
+  "email":"alisatokaev@gmail.com",
   "password":"123456"
 }

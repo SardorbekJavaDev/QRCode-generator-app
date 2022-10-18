@@ -27,7 +27,7 @@ public class AttachController {
         return ResponseEntity.ok(attachService.upload(file));
     }
 
-    @ApiOperation(value = "Open general", notes = "Method used for Open general by id")
+    @ApiOperation(value = "Open general", notes = "Method used for Open by id")
     @GetMapping(value = "/open-general/{id}", produces = MediaType.ALL_VALUE)
     public byte[] open_general(@PathVariable("id") String key) {
         log.info("Attach open_general {}{}", key, AttachController.class);
@@ -41,7 +41,7 @@ public class AttachController {
         return ResponseEntity.ok(attachService.delete(key));
     }
 
-    @ApiOperation(value = "delete by key", notes = "Method used for delete attach by key")
+    @ApiOperation(value = "download by key", notes = "Method used for download attach by key")
     @GetMapping("/download/{key}")
     public ResponseEntity<Resource> download(@PathVariable("key") String key) {
         log.info("Attach download {}{}", key, AttachController.class);

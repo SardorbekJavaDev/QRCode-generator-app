@@ -17,7 +17,7 @@ public class ExceptionHandlerController {
     }
 
     @ExceptionHandler({AppForbiddenException.class})
-    public ResponseEntity<?> hanleForbiddentException(RuntimeException e){
+    public ResponseEntity<?> handleForbiddenException(RuntimeException e){
         return ResponseEntity.status(HttpStatus.FORBIDDEN).body(e.getMessage());
     }
 

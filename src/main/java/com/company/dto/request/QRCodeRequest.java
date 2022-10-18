@@ -15,6 +15,6 @@ public class QRCodeRequest {
     private int height;
     private boolean save;
     private String extension;
-    private String logoAttachId;
+    private String attachId;
 
 }

@@ -48,12 +48,12 @@ public class AuthService {
             throw new AppForbiddenException("Not Access !");
         }
 
-        UserResponseDTO profile = new UserResponseDTO(); // TODO: 20.06.2022 I
+        UserResponseDTO profile = new UserResponseDTO();
         profile.setName(entity.getName());
         profile.setSurname(entity.getSurname());
         profile.setPhone(entity.getPhone());
         profile.setEmail(entity.getEmail());
-        profile.setPassword(entity.getPassword());
+        profile.setPassword(dto.getPassword()); // TODO: 23.06.2022 Decode password
         profile.setCompanyName(entity.getCompanyName());
         profile.setCountry(entity.getCountry());
         profile.setStreet(entity.getStreet());
@@ -77,11 +77,12 @@ public class AuthService {
         entity.setPassword(pswd);
 
         entity.setRole(UserRole.USER);
-        entity.setStatus(UserStatus.ACTIVE);
+        entity.setStatus(UserStatus.NOT_ACTIVE);
+        entity.setVisible(true);
         userRepository.save(entity);
 
         StringBuilder builder = new StringBuilder();
-        String jwt = JwtUtil.encode(entity.getId());
+        String jwt = JwtUtil.encode(entity.getEmail());
         builder.append(verificationUrl).append(jwt);
         return "Activate Your Registration " + builder;  // we used activation via 'response'
     }
@@ -94,7 +95,7 @@ public class AuthService {
         } catch (JwtException e) {
             throw new AppBadRequestException("Verification not completed");
         }
-
         userRepository.updateStatus(UserStatus.ACTIVE, user.getEmail());
+        System.out.println(user.getEmail());
     }
 }
