@@ -31,6 +31,8 @@ import java.net.MalformedURLException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -96,8 +98,9 @@ public class QRCService {
         byte[] data;
         try {
             QRCodeEntity entity = getById(id);
-            String path = entity.getPath() + "/" + id + "." + entity.getExtension();
-            Path file = Paths.get(uploadFolder + path);
+            String path = entity.getPath() + doTimeFormat(entity.getCreatedDate()) + "/" + id + "." + entity.getExtension();
+            Path file = Paths.get(path);
+            System.out.println(path);
             data = Files.readAllBytes(file);
             return data;
         } catch (IOException e) {
@@ -109,13 +112,13 @@ public class QRCService {
     public ResponseEntity<Resource> download(String id) {
         try {
             QRCodeEntity entity = getById(id);
-            String path = entity.getPath() + "/" + id + "." + entity.getExtension();
-            Path file = Paths.get(uploadFolder + path);
+            String path = entity.getPath() + doTimeFormat(entity.getCreatedDate()) + "/" + id + "." + entity.getExtension();
+            Path file = Paths.get(path);
             Resource resource = new UrlResource(file.toUri());
 
             if (resource.exists() || resource.isReadable()) {
                 return ResponseEntity.ok().header(HttpHeaders.CONTENT_DISPOSITION,
-                                "attachment; filename=\"" + entity.getId() + "\"")
+                                "attachment; filename=\"" + entity.getId() + "." + entity.getExtension() + "\"")
                         .body(resource);
             } else {
                 throw new RuntimeException("Could not read the file!");
@@ -127,14 +130,17 @@ public class QRCService {
 
     public Boolean delete(String key) {
         QRCodeEntity entity = getById(key);
-
-        File file = new File(uploadFolder + entity.getPath() +
+        File file = new File(entity.getPath() + doTimeFormat(entity.getCreatedDate()) +
                 "/" + entity.getId() + "." + entity.getExtension());
 
         if (file.delete()) {
             qrCodeRepository.updateVisible(false, key);
             return true;
-        } else throw new AppBadRequestException("Could not read the file!");
+        } else throw new ItemNotFoundException("Not found !");
+    }
+
+    private String doTimeFormat(LocalDateTime createdDate) {
+        return createdDate.format(DateTimeFormatter.ofPattern("yyyy/MM/dd"));
     }
 
     private QRCodeEntity getById(String id) {

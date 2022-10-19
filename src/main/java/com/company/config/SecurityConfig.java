@@ -59,7 +59,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
         http.authorizeRequests()
                 .antMatchers("/api/v1/auth/**").permitAll()
-                .antMatchers("/api/v1/qrcode/").permitAll()
+                .antMatchers("/api/v1/qrcode/**").permitAll()
+//                .antMatchers("/api/v1/qrcode/").permitAll()
                 .antMatchers(AUTH_WHITELIST).permitAll()
                 .anyRequest().authenticated();
 

@@ -2,7 +2,7 @@
 ###
 POST http://localhost:8899/api/v1/qrcode/
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhbGlzYXRva2FldkBnbWFpbC5jb20iLCJpYXQiOjE2NjYwODk1MjgsImV4cCI6MTY2NjE3NTkyOCwiaXNzIjoiVXNlZnVsIENvZGVzIHByb2R1Y3Rpb24ifQ.B24Kqn927ISL-8XLr5_n6-6G1DAuisaCvR-qOVdHjJU
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhbGlzYXRva2FldkBnbWFpbC5jb20iLCJpYXQiOjE2NjYxNzUwNTksImV4cCI6MTY2NjI2MTQ1OSwiaXNzIjoiVXNlZnVsIENvZGVzIHByb2R1Y3Rpb24ifQ.DEFdx7oXU2s96YzWgERqfFvPhLf-abauVE_RqZ63Q5Q
 
 {
   "colorConfig": {
@@ -33,4 +33,11 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhbGlzYXRva2FldkBnbWFpbC5jb
 }
 
 ###
-GET http://localhost:8899/attach/download/8613b3ff-a785-410a-9e45-2c1c08ef5de1
+GET http://localhost:8899/api/v1/qrcode/open-general/32b0487f-5985-48a7-80e3-da56e164ea1c
+
+###
+GET http://localhost:8899/api/v1/qrcode/download/32b0487f-5985-48a7-80e3-da56e164ea1c
+
+
+###
+DELETE http://localhost:8899/api/v1/qrcode/delete/9a4c1340-5b7b-4197-acfa-bc6fba6185d0

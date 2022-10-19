@@ -12,6 +12,6 @@ import javax.transaction.Transactional;
 public interface QRCodeRepository extends JpaRepository<QRCodeEntity, String> {
     @Transactional
     @Modifying
-    @Query("update QRCodeEntity as q set q.status = :status where q.id = :id")
-    void updateVisible(@Param("status") Boolean status, @Param("id") String id);
+    @Query("update QRCodeEntity as q set q.visible = :visible where q.id = :id")
+    void updateVisible(@Param("visible") Boolean visible, @Param("id") String id);
 }
