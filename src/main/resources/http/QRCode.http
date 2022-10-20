@@ -2,7 +2,7 @@
 ###
 POST http://localhost:8899/api/v1/qrcode/
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhbGlzYXRva2FldkBnbWFpbC5jb20iLCJpYXQiOjE2NjYxNzUwNTksImV4cCI6MTY2NjI2MTQ1OSwiaXNzIjoiVXNlZnVsIENvZGVzIHByb2R1Y3Rpb24ifQ.DEFdx7oXU2s96YzWgERqfFvPhLf-abauVE_RqZ63Q5Q
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhbGlzYXRva2FldkBnbWFpbC5jb20iLCJpYXQiOjE2NjYyNDkwMTcsImV4cCI6MTY2NjMzNTQxNywiaXNzIjoiVXNlZnVsIENvZGVzIHByb2R1Y3Rpb24ifQ.qxBqbxVLPaejNdEYsmRMsD2jkmY8hSLo2qC15n_Cs6g
 
 {
   "colorConfig": {

@@ -1,0 +1,14 @@
+###
+POST http://localhost:8899/api/v1/attach/upload
+Content-Type: multipart/form-data; boundary=WebAppBoundary
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhbGlzYXRva2FldkBnbWFpbC5jb20iLCJpYXQiOjE2NjYyNDkwMTcsImV4cCI6MTY2NjMzNTQxNywiaXNzIjoiVXNlZnVsIENvZGVzIHByb2R1Y3Rpb24ifQ.qxBqbxVLPaejNdEYsmRMsD2jkmY8hSLo2qC15n_Cs6g
+
+--WebAppBoundary
+Content-Disposition: form-data; name="file"; filename="img0.jpg"
+
+< D:\Multimedia\Walpaper mix\img0.jpg
+--WebAppBoundary--
+
+###
+GET http://localhost:8899/api/v1/attach/download/717dda4b-b3dd-4212-ab90-8c411ce149b1
+#Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhbGlzYXRva2FldkBnbWFpbC5jb20iLCJpYXQiOjE2NjYyNDkwMTcsImV4cCI6MTY2NjMzNTQxNywiaXNzIjoiVXNlZnVsIENvZGVzIHByb2R1Y3Rpb24ifQ.qxBqbxVLPaejNdEYsmRMsD2jkmY8hSLo2qC15n_Cs6g

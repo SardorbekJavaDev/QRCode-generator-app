@@ -39,7 +39,7 @@ import java.util.Map;
 @Service
 @RequiredArgsConstructor
 public class QRCService {
-    @Value("${attach.upload.folder}")
+    @Value("${qrCode.upload.folder}")
     private String uploadFolder;
     private final EntityDetails entityDetails;
     private final QRCodeRepository qrCodeRepository;
@@ -70,7 +70,9 @@ public class QRCService {
             code = Encoder.encode(dto.getData(), ErrorCorrectionLevel.H, encodingHints);
             String path = uploadFolder + attachService.getYMDString() + "/" + entity.getId() + "." + extension;
             File file = new File(path);
-            file.mkdirs();
+            if (!file.exists()) {
+                file.mkdirs();
+            }
             BufferedImage image = QRCodeGenerator.renderQRImage(code, dto.getColorConfig(), dto.getWidth(), dto.getHeight(), 4);
             ImageIO.write(image, extension, file);
 //            entity.setSize(file.getUsableSpace());

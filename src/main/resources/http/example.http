@@ -1,0 +1,32 @@
+### Upload Linux
+POST http://localhost:8080/attach/upload
+Content-Type: multipart/form-data; boundary=WebAppBoundary
+
+--WebAppBoundary
+Content-Disposition: form-data; name="file"; filename="cata.jpg"
+
+< /home/us/Desktop/party.png
+--WebAppBoundary--
+
+### Upload Windows
+POST http://10.10.3.33:8080/api/v1/attach/upload
+Content-Type: multipart/form-data; boundary=WebAppBoundary
+
+--WebAppBoundary
+Content-Disposition: form-data; name="file"; filename="zor.jpg"
+
+< C:\Users\Admin\Downloads\Без названия.jfif
+--WebAppBoundary--
+
+
+### Open
+GET http://localhost:8080/attach/open/
+
+### Download
+GET http://localhost:8080/attach/download/
+
+### Show all
+GET http://localhost:8080/attach/adm
+
+### Delete
+DELETE http://localhost:8080/attach/adm/8a8a825380fac9500180fac9e2dc0000

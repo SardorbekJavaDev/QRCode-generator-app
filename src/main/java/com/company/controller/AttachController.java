@@ -21,7 +21,7 @@ public class AttachController {
     private final AttachService attachService;
 
     @ApiOperation(value = "upload Attach", notes = "Method used for upload Attach")
-    @PostMapping("/public")
+    @PostMapping("/upload")
     public ResponseEntity<AttachResponseDTO> create(@RequestParam("file") MultipartFile file) {
         log.warn("Attach upload {}{}", file.getOriginalFilename(), AttachController.class);
         return ResponseEntity.ok(attachService.upload(file));

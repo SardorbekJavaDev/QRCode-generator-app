@@ -147,11 +147,11 @@ public class AttachService {
     }
 
     public String getOpenURL(String id) {
-        return domainName + "/attach/open_general/" + id;
+        return domainName + "/api/v1/attach/open_general/" + id;
     }
 
     public String getDownloadURL(String id) {
-        return domainName + "/attach/download/" + id;
+        return domainName + "/api/v1/attach/download/" + id;
     }
 
 
