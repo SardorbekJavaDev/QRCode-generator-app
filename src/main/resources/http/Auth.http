@@ -1,23 +1,23 @@
-### # Registration
+### Registration
 
-POST http://localhost:8899/api/v1/auth/registration
+POST http://localhost:8080/api/v1/auth/registration
 Content-Type: application/json
 
 {
   "name":"Alisa",
   "surname":"Tokaev",
-  "email":"alisatokaev@gmail.com",
+  "email":"altokaev@gmail.com",
   "password":"123456"
 }
 
-### # Verification
-GET http://localhost:8899/api/v1/auth/verification/eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhbGlzYXRva2FldkBnbWFpbC5jb20iLCJpYXQiOjE2NjYwODgyMTQsImV4cCI6MTY2NjE3NDYxNCwiaXNzIjoiVXNlZnVsIENvZGVzIHByb2R1Y3Rpb24ifQ.7qaz1-B0QQVEMLSWjNBNAH3QMYvHIwuKmxx_tZpS8Ac
+### Verification
+GET http://localhost:8080/api/v1/auth/verification/eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhbHRva2FldkBnbWFpbC5jb20iLCJpYXQiOjE2ODUyNTUyNDcsImV4cCI6MTY4NTM0MTY0NywiaXNzIjoiVXNlZnVsIENvZGVzIHByb2R1Y3Rpb24ifQ.GlYnwPtpBn-LE__i0KrP0JmfioSf49oEAnDKTziZJUY
 
-### # Login
-POST http://localhost:8899/api/v1/auth/login
+### Login
+POST http://localhost:8080/api/v1/auth/login
 Content-Type: application/json
 
 {
-  "email":"alisatokaev@gmail.com",
+  "email":"altokaev@gmail.com",
   "password":"123456"
 }

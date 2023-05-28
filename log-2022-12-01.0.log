@@ -1,0 +1,27 @@
+01 Dec 2022 - 12:33:08.418 - c.c.MyQrCodeGeneratorApplication -  INFO  - Starting MyQrCodeGeneratorApplication using Java 18.0.2.1 on DESKTOP-U2HD3QU with PID 11628 (D:\Programming\Projects\Process\QRCode-generator-app\target\classes started by sardo in D:\Programming\Projects\Process\QRCode-generator-app)
+01 Dec 2022 - 12:33:08.428 - c.c.MyQrCodeGeneratorApplication -  DEBUG - Running with Spring Boot v2.7.0, Spring v5.3.20
+01 Dec 2022 - 12:33:08.430 - c.c.MyQrCodeGeneratorApplication -  INFO  - The following 1 profile is active: "dev"
+01 Dec 2022 - 12:33:10.628 - o.s.d.r.c.RepositoryConfigurationDelegate -  INFO  - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+01 Dec 2022 - 12:33:10.748 - o.s.d.r.c.RepositoryConfigurationDelegate -  INFO  - Finished Spring Data repository scanning in 106 ms. Found 3 JPA repository interfaces.
+01 Dec 2022 - 12:33:11.966 - o.s.b.w.e.tomcat.TomcatWebServer -  INFO  - Tomcat initialized with port(s): 8080 (http)
+01 Dec 2022 - 12:33:11.981 - o.a.catalina.core.StandardService -  INFO  - Starting service [Tomcat]
+01 Dec 2022 - 12:33:11.982 - o.a.catalina.core.StandardEngine -  INFO  - Starting Servlet engine: [Apache Tomcat/9.0.63]
+01 Dec 2022 - 12:33:12.256 - o.a.c.c.C.[Tomcat].[localhost].[/] -  INFO  - Initializing Spring embedded WebApplicationContext
+01 Dec 2022 - 12:33:12.257 - o.s.b.w.s.c.ServletWebServerApplicationContext -  INFO  - Root WebApplicationContext: initialization completed in 3565 ms
+01 Dec 2022 - 12:33:12.523 - o.h.jpa.internal.util.LogHelper -  INFO  - HHH000204: Processing PersistenceUnitInfo [name: default]
+01 Dec 2022 - 12:33:12.690 - org.hibernate.Version -  INFO  - HHH000412: Hibernate ORM core version 5.6.9.Final
+01 Dec 2022 - 12:33:13.130 - o.h.annotations.common.Version -  INFO  - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+01 Dec 2022 - 12:33:13.342 - com.zaxxer.hikari.HikariDataSource -  INFO  - HikariPool-1 - Starting...
+01 Dec 2022 - 12:33:13.637 - com.zaxxer.hikari.HikariDataSource -  INFO  - HikariPool-1 - Start completed.
+01 Dec 2022 - 12:33:13.740 - org.hibernate.dialect.Dialect -  INFO  - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+01 Dec 2022 - 12:33:15.460 - o.h.e.t.j.p.i.JtaPlatformInitiator -  INFO  - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+01 Dec 2022 - 12:33:15.483 - o.s.o.j.LocalContainerEntityManagerFactoryBean -  INFO  - Initialized JPA EntityManagerFactory for persistence unit 'default'
+01 Dec 2022 - 12:33:16.270 - com.company.config.filter.JwtFilter -  DEBUG - Filter 'jwtFilter' configured for use
+01 Dec 2022 - 12:33:16.398 - o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration -  WARN  - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+01 Dec 2022 - 12:33:17.341 - o.s.s.web.DefaultSecurityFilterChain -  INFO  - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@7acf07b2, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5d50e7f6, org.springframework.security.web.context.SecurityContextPersistenceFilter@28f081ad, org.springframework.security.web.header.HeaderWriterFilter@1259b2a5, org.springframework.web.filter.CorsFilter@54fbaa65, org.springframework.security.web.authentication.logout.LogoutFilter@6c0bf8f4, com.company.config.filter.JwtFilter@43b3b1b0, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@e30a8ef, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@45430a27, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@48e3017a, org.springframework.security.web.session.SessionManagementFilter@6ce24203, org.springframework.security.web.access.ExceptionTranslationFilter@2d26c6a2, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@df5f657]
+01 Dec 2022 - 12:33:17.737 - o.s.b.w.e.tomcat.TomcatWebServer -  INFO  - Tomcat started on port(s): 8080 (http) with context path ''
+01 Dec 2022 - 12:33:18.219 - c.c.MyQrCodeGeneratorApplication -  INFO  - Started MyQrCodeGeneratorApplication in 10.996 seconds (JVM running for 13.111)
+01 Dec 2022 - 13:36:13.305 - com.zaxxer.hikari.pool.HikariPool -  WARN  - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=43m29s175ms473µs700ns).
+01 Dec 2022 - 14:13:44.799 - o.s.o.j.LocalContainerEntityManagerFactoryBean -  INFO  - Closing JPA EntityManagerFactory for persistence unit 'default'
+01 Dec 2022 - 14:13:44.808 - com.zaxxer.hikari.HikariDataSource -  INFO  - HikariPool-1 - Shutdown initiated...
+01 Dec 2022 - 14:13:44.831 - com.zaxxer.hikari.HikariDataSource -  INFO  - HikariPool-1 - Shutdown completed.

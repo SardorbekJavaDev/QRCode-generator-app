@@ -1,120 +1,479 @@
-18 Oct 2022 - 09:49:34.229 - com.zaxxer.hikari.pool.HikariPool -  WARN  - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1d1h57m16s978ms986µs600ns).
-18 Oct 2022 - 10:01:42.827 - o.s.o.j.LocalContainerEntityManagerFactoryBean -  INFO  - Closing JPA EntityManagerFactory for persistence unit 'default'
-18 Oct 2022 - 10:01:43.364 - com.zaxxer.hikari.HikariDataSource -  INFO  - HikariPool-1 - Shutdown initiated...
-18 Oct 2022 - 10:01:43.429 - com.zaxxer.hikari.HikariDataSource -  INFO  - HikariPool-1 - Shutdown completed.
-18 Oct 2022 - 14:48:37.705 - c.c.MyQrCodeGeneratorApplication -  INFO  - Starting MyQrCodeGeneratorApplication using Java 17.0.4 on DESKTOP-U2HD3QU with PID 13740 (D:\Programming\Portfolio Projects\projects\MyQRCodeGeneratorApp\target\classes started by sardo in D:\Programming\Portfolio Projects\projects\MyQRCodeGeneratorApp)
-18 Oct 2022 - 14:48:37.711 - c.c.MyQrCodeGeneratorApplication -  DEBUG - Running with Spring Boot v2.7.0, Spring v5.3.20
-18 Oct 2022 - 14:48:37.711 - c.c.MyQrCodeGeneratorApplication -  INFO  - The following 1 profile is active: "dev"
-18 Oct 2022 - 14:48:39.836 - o.s.d.r.c.RepositoryConfigurationDelegate -  INFO  - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-18 Oct 2022 - 14:48:39.941 - o.s.d.r.c.RepositoryConfigurationDelegate -  INFO  - Finished Spring Data repository scanning in 88 ms. Found 3 JPA repository interfaces.
-18 Oct 2022 - 14:48:40.899 - o.s.b.w.e.tomcat.TomcatWebServer -  INFO  - Tomcat initialized with port(s): 8899 (http)
-18 Oct 2022 - 14:48:40.917 - o.a.catalina.core.StandardService -  INFO  - Starting service [Tomcat]
-18 Oct 2022 - 14:48:40.918 - o.a.catalina.core.StandardEngine -  INFO  - Starting Servlet engine: [Apache Tomcat/9.0.63]
-18 Oct 2022 - 14:48:41.142 - o.a.c.c.C.[Tomcat].[localhost].[/] -  INFO  - Initializing Spring embedded WebApplicationContext
-18 Oct 2022 - 14:48:41.144 - o.s.b.w.s.c.ServletWebServerApplicationContext -  INFO  - Root WebApplicationContext: initialization completed in 3302 ms
-18 Oct 2022 - 14:48:41.418 - o.h.jpa.internal.util.LogHelper -  INFO  - HHH000204: Processing PersistenceUnitInfo [name: default]
-18 Oct 2022 - 14:48:41.579 - org.hibernate.Version -  INFO  - HHH000412: Hibernate ORM core version 5.6.9.Final
-18 Oct 2022 - 14:48:41.959 - o.h.annotations.common.Version -  INFO  - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-18 Oct 2022 - 14:48:42.186 - com.zaxxer.hikari.HikariDataSource -  INFO  - HikariPool-1 - Starting...
-18 Oct 2022 - 14:48:42.616 - com.zaxxer.hikari.HikariDataSource -  INFO  - HikariPool-1 - Start completed.
-18 Oct 2022 - 14:48:42.680 - org.hibernate.dialect.Dialect -  INFO  - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
-18 Oct 2022 - 14:48:44.897 - o.h.e.t.j.p.i.JtaPlatformInitiator -  INFO  - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-18 Oct 2022 - 14:48:44.917 - o.s.o.j.LocalContainerEntityManagerFactoryBean -  INFO  - Initialized JPA EntityManagerFactory for persistence unit 'default'
-18 Oct 2022 - 14:48:45.954 - com.company.config.filter.JwtFilter -  DEBUG - Filter 'jwtFilter' configured for use
-18 Oct 2022 - 14:48:46.023 - o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration -  WARN  - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-18 Oct 2022 - 14:48:47.155 - o.s.s.web.DefaultSecurityFilterChain -  INFO  - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@538d2308, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3d0697da, org.springframework.security.web.context.SecurityContextPersistenceFilter@53086bdc, org.springframework.security.web.header.HeaderWriterFilter@222dc36c, org.springframework.web.filter.CorsFilter@4b99f2ed, org.springframework.security.web.authentication.logout.LogoutFilter@4cc28ad0, com.company.config.filter.JwtFilter@7b364f47, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@600a1270, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5cef5fc9, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@723081a2, org.springframework.security.web.session.SessionManagementFilter@641255d1, org.springframework.security.web.access.ExceptionTranslationFilter@662b199, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@1bcca516]
-18 Oct 2022 - 14:48:47.596 - o.s.b.w.e.tomcat.TomcatWebServer -  INFO  - Tomcat started on port(s): 8899 (http) with context path ''
-18 Oct 2022 - 14:48:48.274 - c.c.MyQrCodeGeneratorApplication -  INFO  - Started MyQrCodeGeneratorApplication in 11.534 seconds (JVM running for 12.97)
-18 Oct 2022 - 14:49:43.007 - o.s.o.j.LocalContainerEntityManagerFactoryBean -  INFO  - Closing JPA EntityManagerFactory for persistence unit 'default'
-18 Oct 2022 - 14:49:43.009 - com.zaxxer.hikari.HikariDataSource -  INFO  - HikariPool-1 - Shutdown initiated...
-18 Oct 2022 - 14:49:43.018 - com.zaxxer.hikari.HikariDataSource -  INFO  - HikariPool-1 - Shutdown completed.
-18 Oct 2022 - 14:49:57.694 - c.c.MyQrCodeGeneratorApplication -  INFO  - Starting MyQrCodeGeneratorApplication using Java 17.0.4 on DESKTOP-U2HD3QU with PID 10704 (D:\Programming\Portfolio Projects\projects\MyQRCodeGeneratorApp\target\classes started by sardo in D:\Programming\Portfolio Projects\projects\MyQRCodeGeneratorApp)
-18 Oct 2022 - 14:49:57.699 - c.c.MyQrCodeGeneratorApplication -  DEBUG - Running with Spring Boot v2.7.0, Spring v5.3.20
-18 Oct 2022 - 14:49:57.701 - c.c.MyQrCodeGeneratorApplication -  INFO  - The following 1 profile is active: "dev"
-18 Oct 2022 - 14:49:59.840 - o.s.d.r.c.RepositoryConfigurationDelegate -  INFO  - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-18 Oct 2022 - 14:49:59.947 - o.s.d.r.c.RepositoryConfigurationDelegate -  INFO  - Finished Spring Data repository scanning in 89 ms. Found 3 JPA repository interfaces.
-18 Oct 2022 - 14:50:00.995 - o.s.b.w.e.tomcat.TomcatWebServer -  INFO  - Tomcat initialized with port(s): 8899 (http)
-18 Oct 2022 - 14:50:01.015 - o.a.catalina.core.StandardService -  INFO  - Starting service [Tomcat]
-18 Oct 2022 - 14:50:01.015 - o.a.catalina.core.StandardEngine -  INFO  - Starting Servlet engine: [Apache Tomcat/9.0.63]
-18 Oct 2022 - 14:50:01.235 - o.a.c.c.C.[Tomcat].[localhost].[/] -  INFO  - Initializing Spring embedded WebApplicationContext
-18 Oct 2022 - 14:50:01.236 - o.s.b.w.s.c.ServletWebServerApplicationContext -  INFO  - Root WebApplicationContext: initialization completed in 3387 ms
-18 Oct 2022 - 14:50:01.474 - o.h.jpa.internal.util.LogHelper -  INFO  - HHH000204: Processing PersistenceUnitInfo [name: default]
-18 Oct 2022 - 14:50:01.570 - org.hibernate.Version -  INFO  - HHH000412: Hibernate ORM core version 5.6.9.Final
-18 Oct 2022 - 14:50:01.859 - o.h.annotations.common.Version -  INFO  - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-18 Oct 2022 - 14:50:02.087 - com.zaxxer.hikari.HikariDataSource -  INFO  - HikariPool-1 - Starting...
-18 Oct 2022 - 14:50:02.368 - com.zaxxer.hikari.HikariDataSource -  INFO  - HikariPool-1 - Start completed.
-18 Oct 2022 - 14:50:02.424 - org.hibernate.dialect.Dialect -  INFO  - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
-18 Oct 2022 - 14:50:03.970 - o.h.e.t.j.p.i.JtaPlatformInitiator -  INFO  - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-18 Oct 2022 - 14:50:03.985 - o.s.o.j.LocalContainerEntityManagerFactoryBean -  INFO  - Initialized JPA EntityManagerFactory for persistence unit 'default'
-18 Oct 2022 - 14:50:04.721 - com.company.config.filter.JwtFilter -  DEBUG - Filter 'jwtFilter' configured for use
-18 Oct 2022 - 14:50:04.798 - o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration -  WARN  - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-18 Oct 2022 - 14:50:05.848 - o.s.s.web.DefaultSecurityFilterChain -  INFO  - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@4509414e, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@36e9794c, org.springframework.security.web.context.SecurityContextPersistenceFilter@21f9a305, org.springframework.security.web.header.HeaderWriterFilter@5390862e, org.springframework.web.filter.CorsFilter@78a0d664, org.springframework.security.web.authentication.logout.LogoutFilter@a1689e8, com.company.config.filter.JwtFilter@47f416d0, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@aaf4375, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@62f3ad90, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1237aa73, org.springframework.security.web.session.SessionManagementFilter@1eda12b3, org.springframework.security.web.access.ExceptionTranslationFilter@29088d3d, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@15324f25]
-18 Oct 2022 - 14:50:06.278 - o.s.b.w.e.tomcat.TomcatWebServer -  INFO  - Tomcat started on port(s): 8899 (http) with context path ''
-18 Oct 2022 - 14:50:06.791 - c.c.MyQrCodeGeneratorApplication -  INFO  - Started MyQrCodeGeneratorApplication in 10.008 seconds (JVM running for 12.03)
-18 Oct 2022 - 14:50:27.939 - o.s.o.j.LocalContainerEntityManagerFactoryBean -  INFO  - Closing JPA EntityManagerFactory for persistence unit 'default'
-18 Oct 2022 - 14:50:27.942 - com.zaxxer.hikari.HikariDataSource -  INFO  - HikariPool-1 - Shutdown initiated...
-18 Oct 2022 - 14:50:27.951 - com.zaxxer.hikari.HikariDataSource -  INFO  - HikariPool-1 - Shutdown completed.
-18 Oct 2022 - 14:50:42.835 - c.c.MyQrCodeGeneratorApplication -  INFO  - Starting MyQrCodeGeneratorApplication using Java 17.0.4 on DESKTOP-U2HD3QU with PID 5552 (D:\Programming\Portfolio Projects\projects\MyQRCodeGeneratorApp\target\classes started by sardo in D:\Programming\Portfolio Projects\projects\MyQRCodeGeneratorApp)
-18 Oct 2022 - 14:50:42.842 - c.c.MyQrCodeGeneratorApplication -  DEBUG - Running with Spring Boot v2.7.0, Spring v5.3.20
-18 Oct 2022 - 14:50:42.843 - c.c.MyQrCodeGeneratorApplication -  INFO  - The following 1 profile is active: "dev"
-18 Oct 2022 - 14:50:45.174 - o.s.d.r.c.RepositoryConfigurationDelegate -  INFO  - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-18 Oct 2022 - 14:50:45.313 - o.s.d.r.c.RepositoryConfigurationDelegate -  INFO  - Finished Spring Data repository scanning in 115 ms. Found 3 JPA repository interfaces.
-18 Oct 2022 - 14:50:46.798 - o.s.b.w.e.tomcat.TomcatWebServer -  INFO  - Tomcat initialized with port(s): 8899 (http)
-18 Oct 2022 - 14:50:46.824 - o.a.catalina.core.StandardService -  INFO  - Starting service [Tomcat]
-18 Oct 2022 - 14:50:46.824 - o.a.catalina.core.StandardEngine -  INFO  - Starting Servlet engine: [Apache Tomcat/9.0.63]
-18 Oct 2022 - 14:50:47.101 - o.a.c.c.C.[Tomcat].[localhost].[/] -  INFO  - Initializing Spring embedded WebApplicationContext
-18 Oct 2022 - 14:50:47.102 - o.s.b.w.s.c.ServletWebServerApplicationContext -  INFO  - Root WebApplicationContext: initialization completed in 4070 ms
-18 Oct 2022 - 14:50:47.492 - o.h.jpa.internal.util.LogHelper -  INFO  - HHH000204: Processing PersistenceUnitInfo [name: default]
-18 Oct 2022 - 14:50:47.653 - org.hibernate.Version -  INFO  - HHH000412: Hibernate ORM core version 5.6.9.Final
-18 Oct 2022 - 14:50:48.191 - o.h.annotations.common.Version -  INFO  - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-18 Oct 2022 - 14:50:48.754 - com.zaxxer.hikari.HikariDataSource -  INFO  - HikariPool-1 - Starting...
-18 Oct 2022 - 14:50:49.246 - com.zaxxer.hikari.HikariDataSource -  INFO  - HikariPool-1 - Start completed.
-18 Oct 2022 - 14:50:49.335 - org.hibernate.dialect.Dialect -  INFO  - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
-18 Oct 2022 - 14:50:51.745 - o.h.e.t.j.p.i.JtaPlatformInitiator -  INFO  - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-18 Oct 2022 - 14:50:51.774 - o.s.o.j.LocalContainerEntityManagerFactoryBean -  INFO  - Initialized JPA EntityManagerFactory for persistence unit 'default'
-18 Oct 2022 - 14:50:52.812 - com.company.config.filter.JwtFilter -  DEBUG - Filter 'jwtFilter' configured for use
-18 Oct 2022 - 14:50:52.924 - o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration -  WARN  - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-18 Oct 2022 - 14:50:54.304 - o.s.s.web.DefaultSecurityFilterChain -  INFO  - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@425376cc, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@28705150, org.springframework.security.web.context.SecurityContextPersistenceFilter@360e4235, org.springframework.security.web.header.HeaderWriterFilter@7e484bd, org.springframework.web.filter.CorsFilter@6b44121e, org.springframework.security.web.authentication.logout.LogoutFilter@4d73d3d1, com.company.config.filter.JwtFilter@42257df7, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@61c644fe, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@44bd7f24, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@28b286c0, org.springframework.security.web.session.SessionManagementFilter@d8751de, org.springframework.security.web.access.ExceptionTranslationFilter@75b6bd41, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@34a482d0]
-18 Oct 2022 - 14:50:54.842 - o.s.b.w.e.tomcat.TomcatWebServer -  INFO  - Tomcat started on port(s): 8899 (http) with context path ''
-18 Oct 2022 - 14:50:55.358 - c.c.MyQrCodeGeneratorApplication -  INFO  - Started MyQrCodeGeneratorApplication in 13.517 seconds (JVM running for 15.353)
-18 Oct 2022 - 15:15:20.455 - com.zaxxer.hikari.pool.HikariPool -  WARN  - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=20m31s56ms994µs700ns).
-18 Oct 2022 - 15:15:38.483 - o.s.o.j.LocalContainerEntityManagerFactoryBean -  INFO  - Closing JPA EntityManagerFactory for persistence unit 'default'
-18 Oct 2022 - 15:15:38.497 - com.zaxxer.hikari.HikariDataSource -  INFO  - HikariPool-1 - Shutdown initiated...
-18 Oct 2022 - 15:15:38.514 - com.zaxxer.hikari.HikariDataSource -  INFO  - HikariPool-1 - Shutdown completed.
-18 Oct 2022 - 15:15:53.291 - c.c.MyQrCodeGeneratorApplication -  INFO  - Starting MyQrCodeGeneratorApplication using Java 17.0.4 on DESKTOP-U2HD3QU with PID 4896 (D:\Programming\Portfolio Projects\projects\MyQRCodeGeneratorApp\target\classes started by sardo in D:\Programming\Portfolio Projects\projects\MyQRCodeGeneratorApp)
-18 Oct 2022 - 15:15:53.296 - c.c.MyQrCodeGeneratorApplication -  DEBUG - Running with Spring Boot v2.7.0, Spring v5.3.20
-18 Oct 2022 - 15:15:53.298 - c.c.MyQrCodeGeneratorApplication -  INFO  - The following 1 profile is active: "dev"
-18 Oct 2022 - 15:15:55.656 - o.s.d.r.c.RepositoryConfigurationDelegate -  INFO  - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-18 Oct 2022 - 15:15:55.751 - o.s.d.r.c.RepositoryConfigurationDelegate -  INFO  - Finished Spring Data repository scanning in 71 ms. Found 3 JPA repository interfaces.
-18 Oct 2022 - 15:15:56.654 - o.s.b.w.e.tomcat.TomcatWebServer -  INFO  - Tomcat initialized with port(s): 8899 (http)
-18 Oct 2022 - 15:15:56.668 - o.a.catalina.core.StandardService -  INFO  - Starting service [Tomcat]
-18 Oct 2022 - 15:15:56.669 - o.a.catalina.core.StandardEngine -  INFO  - Starting Servlet engine: [Apache Tomcat/9.0.63]
-18 Oct 2022 - 15:15:56.871 - o.a.c.c.C.[Tomcat].[localhost].[/] -  INFO  - Initializing Spring embedded WebApplicationContext
-18 Oct 2022 - 15:15:56.872 - o.s.b.w.s.c.ServletWebServerApplicationContext -  INFO  - Root WebApplicationContext: initialization completed in 3463 ms
-18 Oct 2022 - 15:15:57.114 - o.h.jpa.internal.util.LogHelper -  INFO  - HHH000204: Processing PersistenceUnitInfo [name: default]
-18 Oct 2022 - 15:15:57.202 - org.hibernate.Version -  INFO  - HHH000412: Hibernate ORM core version 5.6.9.Final
-18 Oct 2022 - 15:15:57.470 - o.h.annotations.common.Version -  INFO  - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-18 Oct 2022 - 15:15:57.669 - com.zaxxer.hikari.HikariDataSource -  INFO  - HikariPool-1 - Starting...
-18 Oct 2022 - 15:15:58.053 - com.zaxxer.hikari.HikariDataSource -  INFO  - HikariPool-1 - Start completed.
-18 Oct 2022 - 15:15:58.105 - org.hibernate.dialect.Dialect -  INFO  - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
-18 Oct 2022 - 15:15:59.573 - o.h.e.t.j.p.i.JtaPlatformInitiator -  INFO  - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-18 Oct 2022 - 15:15:59.587 - o.s.o.j.LocalContainerEntityManagerFactoryBean -  INFO  - Initialized JPA EntityManagerFactory for persistence unit 'default'
-18 Oct 2022 - 15:16:00.253 - com.company.config.filter.JwtFilter -  DEBUG - Filter 'jwtFilter' configured for use
-18 Oct 2022 - 15:16:00.326 - o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration -  WARN  - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-18 Oct 2022 - 15:16:01.385 - o.s.s.web.DefaultSecurityFilterChain -  INFO  - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@19877453, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@49bf5ec8, org.springframework.security.web.context.SecurityContextPersistenceFilter@2c02cf78, org.springframework.security.web.header.HeaderWriterFilter@6ce24203, org.springframework.web.filter.CorsFilter@18174bd9, org.springframework.security.web.authentication.logout.LogoutFilter@402fdef1, com.company.config.filter.JwtFilter@73b10975, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@29ebaf2f, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@13d1653, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3af6d7a7, org.springframework.security.web.session.SessionManagementFilter@1500edf3, org.springframework.security.web.access.ExceptionTranslationFilter@5b27d03d, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@4ef0bc5b]
-18 Oct 2022 - 15:16:01.920 - o.s.b.w.e.tomcat.TomcatWebServer -  INFO  - Tomcat started on port(s): 8899 (http) with context path ''
-18 Oct 2022 - 15:16:02.427 - c.c.MyQrCodeGeneratorApplication -  INFO  - Started MyQrCodeGeneratorApplication in 10.066 seconds (JVM running for 11.645)
-18 Oct 2022 - 15:16:54.335 - o.a.c.c.C.[Tomcat].[localhost].[/] -  INFO  - Initializing Spring DispatcherServlet 'dispatcherServlet'
-18 Oct 2022 - 15:16:54.336 - o.s.web.servlet.DispatcherServlet -  INFO  - Initializing Servlet 'dispatcherServlet'
-18 Oct 2022 - 15:16:54.341 - o.s.web.servlet.DispatcherServlet -  INFO  - Completed initialization in 4 ms
-18 Oct 2022 - 15:16:54.746 - c.company.controller.AuthController -  INFO  - Registration: com.company.dto.RegistrationDTO@54cbc011class com.company.service.AuthService
-18 Oct 2022 - 15:17:32.607 - c.company.controller.AuthController -  INFO  - Authorization: AuthRequestDTO(email=alisatokaev@gmail.com, password=123456)class com.company.service.AuthService
-18 Oct 2022 - 15:19:11.433 - c.c.controller.QRCodeController -  INFO  - QRCode Create com.company.dto.request.QRCodeRequest@2dbe5ecfclass com.company.controller.QRCodeController
-18 Oct 2022 - 15:19:11.712 - o.a.c.c.C.[.[.[.[dispatcherServlet] -  ERROR - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.RuntimeException: javax.imageio.IIOException: Can't create an ImageOutputStream!] with root cause
-javax.imageio.IIOException: Can't create an ImageOutputStream!
-	at java.desktop/javax.imageio.ImageIO.write(ImageIO.java:1553)
-	at com.company.service.QRCService.create(QRCService.java:71)
-	at com.company.controller.QRCodeController.create(QRCodeController.java:29)
+28 May 2023 - 11:24:54.980 - c.c.MyQrCodeGeneratorApplication -  INFO  - Starting MyQrCodeGeneratorApplication using Java 17.0.6 on Sardorbek with PID 21124 (D:\Programming\Projects\Process\QRCode-generator-app\target\classes started by sardo in D:\Programming\Projects\Process\QRCode-generator-app)
+28 May 2023 - 11:24:54.985 - c.c.MyQrCodeGeneratorApplication -  DEBUG - Running with Spring Boot v2.7.0, Spring v5.3.20
+28 May 2023 - 11:24:54.986 - c.c.MyQrCodeGeneratorApplication -  INFO  - The following 1 profile is active: "dev"
+28 May 2023 - 11:24:55.660 - o.s.d.r.c.RepositoryConfigurationDelegate -  INFO  - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+28 May 2023 - 11:24:55.733 - o.s.d.r.c.RepositoryConfigurationDelegate -  INFO  - Finished Spring Data repository scanning in 68 ms. Found 3 JPA repository interfaces.
+28 May 2023 - 11:24:56.156 - o.s.b.w.e.tomcat.TomcatWebServer -  INFO  - Tomcat initialized with port(s): 8080 (http)
+28 May 2023 - 11:24:56.161 - o.a.catalina.core.StandardService -  INFO  - Starting service [Tomcat]
+28 May 2023 - 11:24:56.162 - o.a.catalina.core.StandardEngine -  INFO  - Starting Servlet engine: [Apache Tomcat/9.0.63]
+28 May 2023 - 11:24:56.254 - o.a.c.c.C.[Tomcat].[localhost].[/] -  INFO  - Initializing Spring embedded WebApplicationContext
+28 May 2023 - 11:24:56.254 - o.s.b.w.s.c.ServletWebServerApplicationContext -  INFO  - Root WebApplicationContext: initialization completed in 1216 ms
+28 May 2023 - 11:24:56.357 - o.h.jpa.internal.util.LogHelper -  INFO  - HHH000204: Processing PersistenceUnitInfo [name: default]
+28 May 2023 - 11:24:56.393 - org.hibernate.Version -  INFO  - HHH000412: Hibernate ORM core version 5.6.9.Final
+28 May 2023 - 11:24:56.475 - o.h.annotations.common.Version -  INFO  - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+28 May 2023 - 11:24:56.543 - com.zaxxer.hikari.HikariDataSource -  INFO  - HikariPool-1 - Starting...
+28 May 2023 - 11:24:57.702 - com.zaxxer.hikari.pool.HikariPool -  ERROR - HikariPool-1 - Exception during pool initialization.
+org.postgresql.util.PSQLException: FATAL: password authentication failed for user "java_db_user"
+	at org.postgresql.core.v3.ConnectionFactoryImpl.doAuthentication(ConnectionFactoryImpl.java:646)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.tryConnect(ConnectionFactoryImpl.java:180)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:235)
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:49)
+	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:223)
+	at org.postgresql.Driver.makeConnection(Driver.java:402)
+	at org.postgresql.Driver.connect(Driver.java:261)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:364)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:206)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:476)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:561)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112)
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:181)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:68)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:35)
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:101)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:237)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214)
+	at org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory.injectServices(DefaultIdentifierGeneratorFactory.java:175)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.injectDependencies(AbstractServiceRegistryImpl.java:286)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:243)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:173)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:127)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1460)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1494)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:330)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:113)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveConstructorArguments(ConstructorResolver.java:693)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:510)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1352)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1195)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveInnerBean(BeanDefinitionValueResolver.java:374)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:134)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1707)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1452)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:619)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1389)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1309)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:887)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:229)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1372)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1222)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1389)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1309)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:887)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:229)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1372)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1222)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:213)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.getOrderedBeansOfType(ServletContextInitializerBeans.java:212)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAsRegistrationBean(ServletContextInitializerBeans.java:175)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAsRegistrationBean(ServletContextInitializerBeans.java:170)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAdaptableBeans(ServletContextInitializerBeans.java:155)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.<init>(ServletContextInitializerBeans.java:87)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.getServletContextInitializerBeans(ServletWebServerApplicationContext.java:262)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.selfInitialize(ServletWebServerApplicationContext.java:236)
+	at org.springframework.boot.web.embedded.tomcat.TomcatStarter.onStartup(TomcatStarter.java:53)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5219)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1396)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1386)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145)
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:919)
+	at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:835)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1396)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1386)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145)
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:919)
+	at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:263)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.StandardService.startInternal(StandardService.java:432)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:927)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:486)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:123)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.<init>(TomcatWebServer.java:104)
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getTomcatWebServer(TomcatServletWebServerFactory.java:479)
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getWebServer(TomcatServletWebServerFactory.java:211)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.createWebServer(ServletWebServerApplicationContext.java:184)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:162)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:577)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at com.company.MyQrCodeGeneratorApplication.main(MyQrCodeGeneratorApplication.java:10)
+28 May 2023 - 11:24:57.705 - o.h.e.j.e.i.JdbcEnvironmentInitiator -  WARN  - HHH000342: Could not obtain connection to query metadata
+org.postgresql.util.PSQLException: FATAL: password authentication failed for user "java_db_user"
+	at org.postgresql.core.v3.ConnectionFactoryImpl.doAuthentication(ConnectionFactoryImpl.java:646)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.tryConnect(ConnectionFactoryImpl.java:180)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:235)
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:49)
+	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:223)
+	at org.postgresql.Driver.makeConnection(Driver.java:402)
+	at org.postgresql.Driver.connect(Driver.java:261)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:364)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:206)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:476)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:561)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112)
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:181)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:68)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:35)
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:101)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:237)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214)
+	at org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory.injectServices(DefaultIdentifierGeneratorFactory.java:175)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.injectDependencies(AbstractServiceRegistryImpl.java:286)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:243)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:173)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:127)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1460)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1494)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:330)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:113)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveConstructorArguments(ConstructorResolver.java:693)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:510)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1352)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1195)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveInnerBean(BeanDefinitionValueResolver.java:374)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:134)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1707)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1452)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:619)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1389)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1309)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:887)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:229)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1372)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1222)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1389)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1309)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:887)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:229)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1372)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1222)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:213)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.getOrderedBeansOfType(ServletContextInitializerBeans.java:212)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAsRegistrationBean(ServletContextInitializerBeans.java:175)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAsRegistrationBean(ServletContextInitializerBeans.java:170)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAdaptableBeans(ServletContextInitializerBeans.java:155)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.<init>(ServletContextInitializerBeans.java:87)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.getServletContextInitializerBeans(ServletWebServerApplicationContext.java:262)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.selfInitialize(ServletWebServerApplicationContext.java:236)
+	at org.springframework.boot.web.embedded.tomcat.TomcatStarter.onStartup(TomcatStarter.java:53)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5219)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1396)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1386)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145)
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:919)
+	at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:835)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1396)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1386)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145)
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:919)
+	at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:263)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.StandardService.startInternal(StandardService.java:432)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:927)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:486)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:123)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.<init>(TomcatWebServer.java:104)
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getTomcatWebServer(TomcatServletWebServerFactory.java:479)
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getWebServer(TomcatServletWebServerFactory.java:211)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.createWebServer(ServletWebServerApplicationContext.java:184)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:162)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:577)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at com.company.MyQrCodeGeneratorApplication.main(MyQrCodeGeneratorApplication.java:10)
+28 May 2023 - 11:24:57.708 - o.s.o.j.LocalContainerEntityManagerFactoryBean -  ERROR - Failed to initialize JPA EntityManagerFactory: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment]
+28 May 2023 - 11:24:57.709 - o.s.b.w.e.tomcat.TomcatStarter -  ERROR - Error starting Tomcat context. Exception: org.springframework.beans.factory.UnsatisfiedDependencyException. Message: Error creating bean with name 'jwtFilter' defined in file [D:\Programming\Projects\Process\QRCode-generator-app\target\classes\com\company\config\filter\JwtFilter.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'customUserDetailsService' defined in file [D:\Programming\Projects\Process\QRCode-generator-app\target\classes\com\company\service\details\CustomUserDetailsService.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'userRepository' defined in com.company.repository.UserRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Cannot create inner bean '(inner bean)#6a2d867d' of type [org.springframework.orm.jpa.SharedEntityManagerCreator] while setting bean property 'entityManager'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name '(inner bean)#6a2d867d': Cannot resolve reference to bean 'entityManagerFactory' while setting constructor argument; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.service.spi.ServiceException: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment]
+28 May 2023 - 11:24:57.725 - o.a.catalina.core.StandardService -  INFO  - Stopping service [Tomcat]
+28 May 2023 - 11:24:57.728 - o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext -  WARN  - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start web server; nested exception is org.springframework.boot.web.server.WebServerException: Unable to start embedded Tomcat
+28 May 2023 - 11:24:57.734 - o.s.b.a.l.ConditionEvaluationReportLoggingListener -  INFO  - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+28 May 2023 - 11:24:57.746 - o.s.boot.SpringApplication -  ERROR - Application run failed
+org.springframework.context.ApplicationContextException: Unable to start web server; nested exception is org.springframework.boot.web.server.WebServerException: Unable to start embedded Tomcat
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:165)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:577)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at com.company.MyQrCodeGeneratorApplication.main(MyQrCodeGeneratorApplication.java:10)
+Caused by: org.springframework.boot.web.server.WebServerException: Unable to start embedded Tomcat
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:142)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.<init>(TomcatWebServer.java:104)
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getTomcatWebServer(TomcatServletWebServerFactory.java:479)
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getWebServer(TomcatServletWebServerFactory.java:211)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.createWebServer(ServletWebServerApplicationContext.java:184)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:162)
+	... 8 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'jwtFilter' defined in file [D:\Programming\Projects\Process\QRCode-generator-app\target\classes\com\company\config\filter\JwtFilter.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'customUserDetailsService' defined in file [D:\Programming\Projects\Process\QRCode-generator-app\target\classes\com\company\service\details\CustomUserDetailsService.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'userRepository' defined in com.company.repository.UserRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Cannot create inner bean '(inner bean)#6a2d867d' of type [org.springframework.orm.jpa.SharedEntityManagerCreator] while setting bean property 'entityManager'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name '(inner bean)#6a2d867d': Cannot resolve reference to bean 'entityManagerFactory' while setting constructor argument; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.service.spi.ServiceException: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:800)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:229)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1372)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1222)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:213)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.getOrderedBeansOfType(ServletContextInitializerBeans.java:212)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAsRegistrationBean(ServletContextInitializerBeans.java:175)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAsRegistrationBean(ServletContextInitializerBeans.java:170)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAdaptableBeans(ServletContextInitializerBeans.java:155)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.<init>(ServletContextInitializerBeans.java:87)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.getServletContextInitializerBeans(ServletWebServerApplicationContext.java:262)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.selfInitialize(ServletWebServerApplicationContext.java:236)
+	at org.springframework.boot.web.embedded.tomcat.TomcatStarter.onStartup(TomcatStarter.java:53)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5219)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1396)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1386)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145)
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:919)
+	at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:835)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1396)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1386)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145)
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:919)
+	at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:263)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.StandardService.startInternal(StandardService.java:432)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:927)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:486)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:123)
+	... 13 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'customUserDetailsService' defined in file [D:\Programming\Projects\Process\QRCode-generator-app\target\classes\com\company\service\details\CustomUserDetailsService.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'userRepository' defined in com.company.repository.UserRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Cannot create inner bean '(inner bean)#6a2d867d' of type [org.springframework.orm.jpa.SharedEntityManagerCreator] while setting bean property 'entityManager'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name '(inner bean)#6a2d867d': Cannot resolve reference to bean 'entityManagerFactory' while setting constructor argument; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.service.spi.ServiceException: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:800)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:229)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1372)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1222)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1389)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1309)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:887)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	... 54 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'userRepository' defined in com.company.repository.UserRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Cannot create inner bean '(inner bean)#6a2d867d' of type [org.springframework.orm.jpa.SharedEntityManagerCreator] while setting bean property 'entityManager'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name '(inner bean)#6a2d867d': Cannot resolve reference to bean 'entityManagerFactory' while setting constructor argument; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.service.spi.ServiceException: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment]
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveInnerBean(BeanDefinitionValueResolver.java:389)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:134)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1707)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1452)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:619)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1389)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1309)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:887)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	... 68 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name '(inner bean)#6a2d867d': Cannot resolve reference to bean 'entityManagerFactory' while setting constructor argument; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.service.spi.ServiceException: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment]
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:342)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:113)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveConstructorArguments(ConstructorResolver.java:693)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:510)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1352)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1195)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveInnerBean(BeanDefinitionValueResolver.java:374)
+	... 82 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.service.spi.ServiceException: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1804)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:330)
+	... 90 common frames omitted
+Caused by: org.hibernate.service.spi.ServiceException: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:275)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:237)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214)
+	at org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory.injectServices(DefaultIdentifierGeneratorFactory.java:175)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.injectDependencies(AbstractServiceRegistryImpl.java:286)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:243)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:173)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:127)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1460)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1494)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800)
+	... 97 common frames omitted
+Caused by: org.hibernate.HibernateException: Access to DialectResolutionInfo cannot be null when 'hibernate.dialect' not set
+	at org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl.determineDialect(DialectFactoryImpl.java:100)
+	at org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl.buildDialect(DialectFactoryImpl.java:54)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:138)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:35)
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:101)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263)
+	... 114 common frames omitted
+28 May 2023 - 11:26:49.341 - c.c.MyQrCodeGeneratorApplication -  INFO  - Starting MyQrCodeGeneratorApplication using Java 17.0.6 on Sardorbek with PID 2988 (D:\Programming\Projects\Process\QRCode-generator-app\target\classes started by sardo in D:\Programming\Projects\Process\QRCode-generator-app)
+28 May 2023 - 11:26:49.343 - c.c.MyQrCodeGeneratorApplication -  DEBUG - Running with Spring Boot v2.7.0, Spring v5.3.20
+28 May 2023 - 11:26:49.344 - c.c.MyQrCodeGeneratorApplication -  INFO  - The following 1 profile is active: "dev"
+28 May 2023 - 11:26:50.104 - o.s.d.r.c.RepositoryConfigurationDelegate -  INFO  - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+28 May 2023 - 11:26:50.148 - o.s.d.r.c.RepositoryConfigurationDelegate -  INFO  - Finished Spring Data repository scanning in 31 ms. Found 3 JPA repository interfaces.
+28 May 2023 - 11:26:50.487 - o.s.b.w.e.tomcat.TomcatWebServer -  INFO  - Tomcat initialized with port(s): 8080 (http)
+28 May 2023 - 11:26:50.492 - o.a.catalina.core.StandardService -  INFO  - Starting service [Tomcat]
+28 May 2023 - 11:26:50.492 - o.a.catalina.core.StandardEngine -  INFO  - Starting Servlet engine: [Apache Tomcat/9.0.63]
+28 May 2023 - 11:26:50.579 - o.a.c.c.C.[Tomcat].[localhost].[/] -  INFO  - Initializing Spring embedded WebApplicationContext
+28 May 2023 - 11:26:50.579 - o.s.b.w.s.c.ServletWebServerApplicationContext -  INFO  - Root WebApplicationContext: initialization completed in 1193 ms
+28 May 2023 - 11:26:50.663 - o.h.jpa.internal.util.LogHelper -  INFO  - HHH000204: Processing PersistenceUnitInfo [name: default]
+28 May 2023 - 11:26:50.695 - org.hibernate.Version -  INFO  - HHH000412: Hibernate ORM core version 5.6.9.Final
+28 May 2023 - 11:26:50.823 - o.h.annotations.common.Version -  INFO  - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+28 May 2023 - 11:26:50.896 - com.zaxxer.hikari.HikariDataSource -  INFO  - HikariPool-1 - Starting...
+28 May 2023 - 11:26:51.028 - com.zaxxer.hikari.HikariDataSource -  INFO  - HikariPool-1 - Start completed.
+28 May 2023 - 11:26:51.043 - org.hibernate.dialect.Dialect -  INFO  - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+28 May 2023 - 11:26:51.559 - o.h.e.t.j.p.i.JtaPlatformInitiator -  INFO  - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+28 May 2023 - 11:26:51.563 - o.s.o.j.LocalContainerEntityManagerFactoryBean -  INFO  - Initialized JPA EntityManagerFactory for persistence unit 'default'
+28 May 2023 - 11:26:51.813 - com.company.config.filter.JwtFilter -  DEBUG - Filter 'jwtFilter' configured for use
+28 May 2023 - 11:26:51.839 - o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration -  WARN  - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+28 May 2023 - 11:26:52.222 - o.s.s.web.DefaultSecurityFilterChain -  INFO  - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@45a40353, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@33efa7d4, org.springframework.security.web.context.SecurityContextPersistenceFilter@2db4a84a, org.springframework.security.web.header.HeaderWriterFilter@12d8e6b6, org.springframework.web.filter.CorsFilter@fe337, org.springframework.security.web.authentication.logout.LogoutFilter@3abb6aa, com.company.config.filter.JwtFilter@3c34c491, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@b867869, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4a7427f9, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@356cb230, org.springframework.security.web.session.SessionManagementFilter@3829306d, org.springframework.security.web.access.ExceptionTranslationFilter@6d514259, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@a1689e8]
+28 May 2023 - 11:26:52.367 - o.s.b.w.e.tomcat.TomcatWebServer -  INFO  - Tomcat started on port(s): 8080 (http) with context path ''
+28 May 2023 - 11:26:52.544 - c.c.MyQrCodeGeneratorApplication -  INFO  - Started MyQrCodeGeneratorApplication in 3.471 seconds (JVM running for 3.933)
+28 May 2023 - 11:27:03.545 - o.a.c.c.C.[Tomcat].[localhost].[/] -  INFO  - Initializing Spring DispatcherServlet 'dispatcherServlet'
+28 May 2023 - 11:27:03.545 - o.s.web.servlet.DispatcherServlet -  INFO  - Initializing Servlet 'dispatcherServlet'
+28 May 2023 - 11:27:03.546 - o.s.web.servlet.DispatcherServlet -  INFO  - Completed initialization in 1 ms
+28 May 2023 - 11:27:27.021 - c.company.controller.AuthController -  INFO  - Registration: com.company.dto.RegistrationDTO@7505dc67class com.company.service.AuthService
+28 May 2023 - 11:28:34.582 - c.company.controller.AuthController -  INFO  - Authorization: AuthRequestDTO(email=alisatokaev@gmail.com, password=123456)class com.company.service.AuthService
+28 May 2023 - 11:28:34.585 - com.company.service.AuthService -  WARN  - login: Password or email wrong!
+28 May 2023 - 11:29:00.262 - c.company.controller.AuthController -  INFO  - Authorization: AuthRequestDTO(email=altokaev@gmail.com, password=123456)class com.company.service.AuthService
+28 May 2023 - 11:29:55.734 - c.c.controller.QRCodeController -  INFO  - QRCode Create com.company.dto.request.QRCodeRequest@334c3bffclass com.company.controller.QRCodeController
+28 May 2023 - 11:30:08.692 - c.c.controller.QRCodeController -  INFO  - QRCode Create com.company.dto.request.QRCodeRequest@6594d1ecclass com.company.controller.QRCodeController
+28 May 2023 - 11:31:15.367 - c.c.controller.QRCodeController -  INFO  - QRCode download ce7c46db-0661-4a99-9f50-55776d9c1b64class com.company.controller.QRCodeController
+28 May 2023 - 11:31:15.387 - o.a.c.c.C.[.[.[.[dispatcherServlet] -  ERROR - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.RuntimeException: Could not read the file!] with root cause
+java.lang.RuntimeException: Could not read the file!
+	at com.company.service.QRCService.download(QRCService.java:126)
+	at com.company.controller.QRCodeController.download(QRCodeController.java:50)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -128,8 +487,8 @@ javax.imageio.IIOException: Can't create an ImageOutputStream!
 	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067)
 	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)
 	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
-	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:681)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:655)
 	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
@@ -156,7 +515,7 @@ javax.imageio.IIOException: Can't create an ImageOutputStream!
 	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
 	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
 	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
-	at com.company.config.filter.JwtFilter.doFilterInternal(JwtFilter.java:60)
+	at com.company.config.filter.JwtFilter.doFilterInternal(JwtFilter.java:36)
 	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
 	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
 	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:103)
@@ -212,42 +571,44 @@ javax.imageio.IIOException: Can't create an ImageOutputStream!
 	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.base/java.lang.Thread.run(Thread.java:833)
-18 Oct 2022 - 15:24:46.483 - o.s.o.j.LocalContainerEntityManagerFactoryBean -  INFO  - Closing JPA EntityManagerFactory for persistence unit 'default'
-18 Oct 2022 - 15:24:46.486 - com.zaxxer.hikari.HikariDataSource -  INFO  - HikariPool-1 - Shutdown initiated...
-18 Oct 2022 - 15:24:46.496 - com.zaxxer.hikari.HikariDataSource -  INFO  - HikariPool-1 - Shutdown completed.
-18 Oct 2022 - 15:25:02.073 - c.c.MyQrCodeGeneratorApplication -  INFO  - Starting MyQrCodeGeneratorApplication using Java 17.0.4 on DESKTOP-U2HD3QU with PID 14300 (D:\Programming\Portfolio Projects\projects\MyQRCodeGeneratorApp\target\classes started by sardo in D:\Programming\Portfolio Projects\projects\MyQRCodeGeneratorApp)
-18 Oct 2022 - 15:25:02.079 - c.c.MyQrCodeGeneratorApplication -  DEBUG - Running with Spring Boot v2.7.0, Spring v5.3.20
-18 Oct 2022 - 15:25:02.080 - c.c.MyQrCodeGeneratorApplication -  INFO  - The following 1 profile is active: "dev"
-18 Oct 2022 - 15:25:03.870 - o.s.d.r.c.RepositoryConfigurationDelegate -  INFO  - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-18 Oct 2022 - 15:25:03.956 - o.s.d.r.c.RepositoryConfigurationDelegate -  INFO  - Finished Spring Data repository scanning in 71 ms. Found 3 JPA repository interfaces.
-18 Oct 2022 - 15:25:04.812 - o.s.b.w.e.tomcat.TomcatWebServer -  INFO  - Tomcat initialized with port(s): 8899 (http)
-18 Oct 2022 - 15:25:04.825 - o.a.catalina.core.StandardService -  INFO  - Starting service [Tomcat]
-18 Oct 2022 - 15:25:04.825 - o.a.catalina.core.StandardEngine -  INFO  - Starting Servlet engine: [Apache Tomcat/9.0.63]
-18 Oct 2022 - 15:25:04.994 - o.a.c.c.C.[Tomcat].[localhost].[/] -  INFO  - Initializing Spring embedded WebApplicationContext
-18 Oct 2022 - 15:25:04.994 - o.s.b.w.s.c.ServletWebServerApplicationContext -  INFO  - Root WebApplicationContext: initialization completed in 2821 ms
-18 Oct 2022 - 15:25:05.213 - o.h.jpa.internal.util.LogHelper -  INFO  - HHH000204: Processing PersistenceUnitInfo [name: default]
-18 Oct 2022 - 15:25:05.296 - org.hibernate.Version -  INFO  - HHH000412: Hibernate ORM core version 5.6.9.Final
-18 Oct 2022 - 15:25:05.539 - o.h.annotations.common.Version -  INFO  - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-18 Oct 2022 - 15:25:05.705 - com.zaxxer.hikari.HikariDataSource -  INFO  - HikariPool-1 - Starting...
-18 Oct 2022 - 15:25:05.943 - com.zaxxer.hikari.HikariDataSource -  INFO  - HikariPool-1 - Start completed.
-18 Oct 2022 - 15:25:05.993 - org.hibernate.dialect.Dialect -  INFO  - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
-18 Oct 2022 - 15:25:07.462 - o.h.e.t.j.p.i.JtaPlatformInitiator -  INFO  - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-18 Oct 2022 - 15:25:07.480 - o.s.o.j.LocalContainerEntityManagerFactoryBean -  INFO  - Initialized JPA EntityManagerFactory for persistence unit 'default'
-18 Oct 2022 - 15:25:08.179 - com.company.config.filter.JwtFilter -  DEBUG - Filter 'jwtFilter' configured for use
-18 Oct 2022 - 15:25:08.289 - o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration -  WARN  - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-18 Oct 2022 - 15:25:09.661 - o.s.s.web.DefaultSecurityFilterChain -  INFO  - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@50b78155, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1e284d90, org.springframework.security.web.context.SecurityContextPersistenceFilter@73158d35, org.springframework.security.web.header.HeaderWriterFilter@255482cb, org.springframework.web.filter.CorsFilter@61c11339, org.springframework.security.web.authentication.logout.LogoutFilter@1b83fac3, com.company.config.filter.JwtFilter@2526d5f9, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6d5fea64, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2d26c6a2, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@31ecd003, org.springframework.security.web.session.SessionManagementFilter@5cef5fc9, org.springframework.security.web.access.ExceptionTranslationFilter@ab5dde4, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@3cf1b5fb]
-18 Oct 2022 - 15:25:10.145 - o.s.b.w.e.tomcat.TomcatWebServer -  INFO  - Tomcat started on port(s): 8899 (http) with context path ''
-18 Oct 2022 - 15:25:10.799 - c.c.MyQrCodeGeneratorApplication -  INFO  - Started MyQrCodeGeneratorApplication in 9.455 seconds (JVM running for 10.618)
-18 Oct 2022 - 15:25:20.067 - o.a.c.c.C.[Tomcat].[localhost].[/] -  INFO  - Initializing Spring DispatcherServlet 'dispatcherServlet'
-18 Oct 2022 - 15:25:20.068 - o.s.web.servlet.DispatcherServlet -  INFO  - Initializing Servlet 'dispatcherServlet'
-18 Oct 2022 - 15:25:20.071 - o.s.web.servlet.DispatcherServlet -  INFO  - Completed initialization in 3 ms
-18 Oct 2022 - 15:25:20.379 - c.company.controller.AuthController -  INFO  - Authorization: AuthRequestDTO(email=alisatokaev@gmail.com, password=123456)class com.company.service.AuthService
-18 Oct 2022 - 15:26:01.342 - c.c.controller.QRCodeController -  INFO  - QRCode Create com.company.dto.request.QRCodeRequest@10f66880class com.company.controller.QRCodeController
-18 Oct 2022 - 15:26:02.067 - o.a.c.c.C.[.[.[.[dispatcherServlet] -  ERROR - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.NullPointerException: Cannot invoke "java.lang.Long.longValue()" because the return value of "com.company.entity.QRCodeEntity.getSize()" is null] with root cause
-java.lang.NullPointerException: Cannot invoke "java.lang.Long.longValue()" because the return value of "com.company.entity.QRCodeEntity.getSize()" is null
-	at com.company.service.QRCService.toQRCodeResponse(QRCService.java:85)
-	at com.company.service.QRCService.create(QRCService.java:78)
-	at com.company.controller.QRCodeController.create(QRCodeController.java:29)
+28 May 2023 - 11:31:25.345 - c.c.controller.QRCodeController -  INFO  - QRCode open_general ce7c46db-0661-4a99-9f50-55776d9c1b64class com.company.controller.QRCodeController
+28 May 2023 - 11:31:37.557 - c.c.controller.QRCodeController -  INFO  - QRCode open_general ce7c46db-0661-4a99-9f50-55776d9c1b64class com.company.controller.QRCodeController
+28 May 2023 - 11:31:44.524 - c.c.controller.QRCodeController -  INFO  - QRCode open_general ce7c46db-0661-4a99-9f50-55776d9c1b64class com.company.controller.QRCodeController
+28 May 2023 - 11:35:50.465 - o.s.o.j.LocalContainerEntityManagerFactoryBean -  INFO  - Closing JPA EntityManagerFactory for persistence unit 'default'
+28 May 2023 - 11:35:50.467 - com.zaxxer.hikari.HikariDataSource -  INFO  - HikariPool-1 - Shutdown initiated...
+28 May 2023 - 11:35:50.469 - com.zaxxer.hikari.HikariDataSource -  INFO  - HikariPool-1 - Shutdown completed.
+28 May 2023 - 11:35:55.157 - c.c.MyQrCodeGeneratorApplication -  INFO  - Starting MyQrCodeGeneratorApplication using Java 17.0.6 on Sardorbek with PID 18260 (D:\Programming\Projects\Process\QRCode-generator-app\target\classes started by sardo in D:\Programming\Projects\Process\QRCode-generator-app)
+28 May 2023 - 11:35:55.159 - c.c.MyQrCodeGeneratorApplication -  DEBUG - Running with Spring Boot v2.7.0, Spring v5.3.20
+28 May 2023 - 11:35:55.160 - c.c.MyQrCodeGeneratorApplication -  INFO  - The following 1 profile is active: "dev"
+28 May 2023 - 11:35:55.819 - o.s.d.r.c.RepositoryConfigurationDelegate -  INFO  - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+28 May 2023 - 11:35:55.859 - o.s.d.r.c.RepositoryConfigurationDelegate -  INFO  - Finished Spring Data repository scanning in 33 ms. Found 3 JPA repository interfaces.
+28 May 2023 - 11:35:56.196 - o.s.b.w.e.tomcat.TomcatWebServer -  INFO  - Tomcat initialized with port(s): 8080 (http)
+28 May 2023 - 11:35:56.200 - o.a.catalina.core.StandardService -  INFO  - Starting service [Tomcat]
+28 May 2023 - 11:35:56.201 - o.a.catalina.core.StandardEngine -  INFO  - Starting Servlet engine: [Apache Tomcat/9.0.63]
+28 May 2023 - 11:35:56.279 - o.a.c.c.C.[Tomcat].[localhost].[/] -  INFO  - Initializing Spring embedded WebApplicationContext
+28 May 2023 - 11:35:56.279 - o.s.b.w.s.c.ServletWebServerApplicationContext -  INFO  - Root WebApplicationContext: initialization completed in 1075 ms
+28 May 2023 - 11:35:56.362 - o.h.jpa.internal.util.LogHelper -  INFO  - HHH000204: Processing PersistenceUnitInfo [name: default]
+28 May 2023 - 11:35:56.386 - org.hibernate.Version -  INFO  - HHH000412: Hibernate ORM core version 5.6.9.Final
+28 May 2023 - 11:35:56.482 - o.h.annotations.common.Version -  INFO  - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+28 May 2023 - 11:35:56.544 - com.zaxxer.hikari.HikariDataSource -  INFO  - HikariPool-1 - Starting...
+28 May 2023 - 11:35:56.647 - com.zaxxer.hikari.HikariDataSource -  INFO  - HikariPool-1 - Start completed.
+28 May 2023 - 11:35:56.662 - org.hibernate.dialect.Dialect -  INFO  - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+28 May 2023 - 11:35:57.137 - o.h.e.t.j.p.i.JtaPlatformInitiator -  INFO  - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+28 May 2023 - 11:35:57.141 - o.s.o.j.LocalContainerEntityManagerFactoryBean -  INFO  - Initialized JPA EntityManagerFactory for persistence unit 'default'
+28 May 2023 - 11:35:57.383 - com.company.config.filter.JwtFilter -  DEBUG - Filter 'jwtFilter' configured for use
+28 May 2023 - 11:35:57.410 - o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration -  WARN  - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+28 May 2023 - 11:35:57.791 - o.s.s.web.DefaultSecurityFilterChain -  INFO  - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@649a6d88, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@69e23e94, org.springframework.security.web.context.SecurityContextPersistenceFilter@13d1653, org.springframework.security.web.header.HeaderWriterFilter@3abb6aa, org.springframework.web.filter.CorsFilter@55c78556, org.springframework.security.web.authentication.logout.LogoutFilter@75b6bd41, com.company.config.filter.JwtFilter@50dd1e3a, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@23e1f610, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@dc24732, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@25134e01, org.springframework.security.web.session.SessionManagementFilter@20a2930f, org.springframework.security.web.access.ExceptionTranslationFilter@e30a8ef, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@26d02dc6]
+28 May 2023 - 11:35:57.930 - o.s.b.w.e.tomcat.TomcatWebServer -  INFO  - Tomcat started on port(s): 8080 (http) with context path ''
+28 May 2023 - 11:35:58.134 - c.c.MyQrCodeGeneratorApplication -  INFO  - Started MyQrCodeGeneratorApplication in 3.263 seconds (JVM running for 3.76)
+28 May 2023 - 11:36:18.628 - o.a.c.c.C.[Tomcat].[localhost].[/] -  INFO  - Initializing Spring DispatcherServlet 'dispatcherServlet'
+28 May 2023 - 11:36:18.628 - o.s.web.servlet.DispatcherServlet -  INFO  - Initializing Servlet 'dispatcherServlet'
+28 May 2023 - 11:36:18.629 - o.s.web.servlet.DispatcherServlet -  INFO  - Completed initialization in 0 ms
+28 May 2023 - 11:36:18.721 - c.company.controller.AuthController -  INFO  - Authorization: AuthRequestDTO(email=altokaev@gmail.com, password=123456)class com.company.service.AuthService
+28 May 2023 - 11:36:43.256 - c.c.controller.QRCodeController -  INFO  - QRCode download ce7c46db-0661-4a99-9f50-55776d9c1b64class com.company.controller.QRCodeController
+28 May 2023 - 11:36:43.285 - o.a.c.c.C.[.[.[.[dispatcherServlet] -  ERROR - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.RuntimeException: Could not read the file!] with root cause
+java.lang.RuntimeException: Could not read the file!
+	at com.company.service.QRCService.download(QRCService.java:127)
+	at com.company.controller.QRCodeController.download(QRCodeController.java:50)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -261,8 +622,8 @@ java.lang.NullPointerException: Cannot invoke "java.lang.Long.longValue()" becau
 	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067)
 	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)
 	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
-	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:681)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:655)
 	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
@@ -289,7 +650,7 @@ java.lang.NullPointerException: Cannot invoke "java.lang.Long.longValue()" becau
 	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
 	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
 	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
-	at com.company.config.filter.JwtFilter.doFilterInternal(JwtFilter.java:60)
+	at com.company.config.filter.JwtFilter.doFilterInternal(JwtFilter.java:36)
 	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
 	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
 	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:103)
@@ -345,67 +706,6 @@ java.lang.NullPointerException: Cannot invoke "java.lang.Long.longValue()" becau
 	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.base/java.lang.Thread.run(Thread.java:833)
-18 Oct 2022 - 15:30:46.861 - o.s.o.j.LocalContainerEntityManagerFactoryBean -  INFO  - Closing JPA EntityManagerFactory for persistence unit 'default'
-18 Oct 2022 - 15:30:46.863 - com.zaxxer.hikari.HikariDataSource -  INFO  - HikariPool-1 - Shutdown initiated...
-18 Oct 2022 - 15:30:46.881 - com.zaxxer.hikari.HikariDataSource -  INFO  - HikariPool-1 - Shutdown completed.
-18 Oct 2022 - 15:31:03.168 - c.c.MyQrCodeGeneratorApplication -  INFO  - Starting MyQrCodeGeneratorApplication using Java 17.0.4 on DESKTOP-U2HD3QU with PID 5640 (D:\Programming\Portfolio Projects\projects\MyQRCodeGeneratorApp\target\classes started by sardo in D:\Programming\Portfolio Projects\projects\MyQRCodeGeneratorApp)
-18 Oct 2022 - 15:31:03.175 - c.c.MyQrCodeGeneratorApplication -  DEBUG - Running with Spring Boot v2.7.0, Spring v5.3.20
-18 Oct 2022 - 15:31:03.177 - c.c.MyQrCodeGeneratorApplication -  INFO  - The following 1 profile is active: "dev"
-18 Oct 2022 - 15:31:07.137 - o.s.d.r.c.RepositoryConfigurationDelegate -  INFO  - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-18 Oct 2022 - 15:31:07.423 - o.s.d.r.c.RepositoryConfigurationDelegate -  INFO  - Finished Spring Data repository scanning in 192 ms. Found 3 JPA repository interfaces.
-18 Oct 2022 - 15:31:09.288 - o.s.b.w.e.tomcat.TomcatWebServer -  INFO  - Tomcat initialized with port(s): 8899 (http)
-18 Oct 2022 - 15:31:09.311 - o.a.catalina.core.StandardService -  INFO  - Starting service [Tomcat]
-18 Oct 2022 - 15:31:09.312 - o.a.catalina.core.StandardEngine -  INFO  - Starting Servlet engine: [Apache Tomcat/9.0.63]
-18 Oct 2022 - 15:31:09.664 - o.a.c.c.C.[Tomcat].[localhost].[/] -  INFO  - Initializing Spring embedded WebApplicationContext
-18 Oct 2022 - 15:31:09.665 - o.s.b.w.s.c.ServletWebServerApplicationContext -  INFO  - Root WebApplicationContext: initialization completed in 6343 ms
-18 Oct 2022 - 15:31:10.082 - o.h.jpa.internal.util.LogHelper -  INFO  - HHH000204: Processing PersistenceUnitInfo [name: default]
-18 Oct 2022 - 15:31:10.234 - org.hibernate.Version -  INFO  - HHH000412: Hibernate ORM core version 5.6.9.Final
-18 Oct 2022 - 15:31:10.758 - o.h.annotations.common.Version -  INFO  - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-18 Oct 2022 - 15:31:11.135 - com.zaxxer.hikari.HikariDataSource -  INFO  - HikariPool-1 - Starting...
-18 Oct 2022 - 15:31:11.585 - com.zaxxer.hikari.HikariDataSource -  INFO  - HikariPool-1 - Start completed.
-18 Oct 2022 - 15:31:11.670 - org.hibernate.dialect.Dialect -  INFO  - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
-18 Oct 2022 - 15:31:13.554 - o.h.e.t.j.p.i.JtaPlatformInitiator -  INFO  - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-18 Oct 2022 - 15:31:13.574 - o.s.o.j.LocalContainerEntityManagerFactoryBean -  INFO  - Initialized JPA EntityManagerFactory for persistence unit 'default'
-18 Oct 2022 - 15:31:14.553 - com.company.config.filter.JwtFilter -  DEBUG - Filter 'jwtFilter' configured for use
-18 Oct 2022 - 15:31:14.649 - o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration -  WARN  - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-18 Oct 2022 - 15:31:16.141 - o.s.s.web.DefaultSecurityFilterChain -  INFO  - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@4b99f2ed, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@723081a2, org.springframework.security.web.context.SecurityContextPersistenceFilter@600a1270, org.springframework.security.web.header.HeaderWriterFilter@27b84c9a, org.springframework.web.filter.CorsFilter@481f698f, org.springframework.security.web.authentication.logout.LogoutFilter@28f081ad, com.company.config.filter.JwtFilter@d763b06, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@28effa3f, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7b6b8cea, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@41ae9f11, org.springframework.security.web.session.SessionManagementFilter@74159dc9, org.springframework.security.web.access.ExceptionTranslationFilter@222dc36c, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@762d2e4c]
-18 Oct 2022 - 15:31:16.684 - o.s.b.w.e.tomcat.TomcatWebServer -  INFO  - Tomcat started on port(s): 8899 (http) with context path ''
-18 Oct 2022 - 15:31:17.147 - c.c.MyQrCodeGeneratorApplication -  INFO  - Started MyQrCodeGeneratorApplication in 14.949 seconds (JVM running for 16.364)
-18 Oct 2022 - 15:31:23.471 - o.a.c.c.C.[Tomcat].[localhost].[/] -  INFO  - Initializing Spring DispatcherServlet 'dispatcherServlet'
-18 Oct 2022 - 15:31:23.471 - o.s.web.servlet.DispatcherServlet -  INFO  - Initializing Servlet 'dispatcherServlet'
-18 Oct 2022 - 15:31:23.474 - o.s.web.servlet.DispatcherServlet -  INFO  - Completed initialization in 3 ms
-18 Oct 2022 - 15:31:23.807 - c.company.controller.AuthController -  INFO  - Authorization: AuthRequestDTO(email=alisatokaev@gmail.com, password=123456)class com.company.service.AuthService
-18 Oct 2022 - 15:31:55.306 - o.a.c.util.SessionIdGeneratorBase -  WARN  - Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [137] milliseconds.
-18 Oct 2022 - 15:31:55.326 - c.c.controller.QRCodeController -  INFO  - QRCode Create com.company.dto.request.QRCodeRequest@783658e1class com.company.controller.QRCodeController
-18 Oct 2022 - 15:36:19.110 - o.s.o.j.LocalContainerEntityManagerFactoryBean -  INFO  - Closing JPA EntityManagerFactory for persistence unit 'default'
-18 Oct 2022 - 15:36:19.113 - com.zaxxer.hikari.HikariDataSource -  INFO  - HikariPool-1 - Shutdown initiated...
-18 Oct 2022 - 15:36:19.123 - com.zaxxer.hikari.HikariDataSource -  INFO  - HikariPool-1 - Shutdown completed.
-18 Oct 2022 - 15:36:33.882 - c.c.MyQrCodeGeneratorApplication -  INFO  - Starting MyQrCodeGeneratorApplication using Java 17.0.4 on DESKTOP-U2HD3QU with PID 16332 (D:\Programming\Portfolio Projects\projects\MyQRCodeGeneratorApp\target\classes started by sardo in D:\Programming\Portfolio Projects\projects\MyQRCodeGeneratorApp)
-18 Oct 2022 - 15:36:33.888 - c.c.MyQrCodeGeneratorApplication -  DEBUG - Running with Spring Boot v2.7.0, Spring v5.3.20
-18 Oct 2022 - 15:36:33.889 - c.c.MyQrCodeGeneratorApplication -  INFO  - The following 1 profile is active: "dev"
-18 Oct 2022 - 15:36:35.938 - o.s.d.r.c.RepositoryConfigurationDelegate -  INFO  - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-18 Oct 2022 - 15:36:36.032 - o.s.d.r.c.RepositoryConfigurationDelegate -  INFO  - Finished Spring Data repository scanning in 77 ms. Found 3 JPA repository interfaces.
-18 Oct 2022 - 15:36:37.073 - o.s.b.w.e.tomcat.TomcatWebServer -  INFO  - Tomcat initialized with port(s): 8899 (http)
-18 Oct 2022 - 15:36:37.088 - o.a.catalina.core.StandardService -  INFO  - Starting service [Tomcat]
-18 Oct 2022 - 15:36:37.090 - o.a.catalina.core.StandardEngine -  INFO  - Starting Servlet engine: [Apache Tomcat/9.0.63]
-18 Oct 2022 - 15:36:37.291 - o.a.c.c.C.[Tomcat].[localhost].[/] -  INFO  - Initializing Spring embedded WebApplicationContext
-18 Oct 2022 - 15:36:37.294 - o.s.b.w.s.c.ServletWebServerApplicationContext -  INFO  - Root WebApplicationContext: initialization completed in 3289 ms
-18 Oct 2022 - 15:36:37.672 - o.h.jpa.internal.util.LogHelper -  INFO  - HHH000204: Processing PersistenceUnitInfo [name: default]
-18 Oct 2022 - 15:36:37.785 - org.hibernate.Version -  INFO  - HHH000412: Hibernate ORM core version 5.6.9.Final
-18 Oct 2022 - 15:36:38.059 - o.h.annotations.common.Version -  INFO  - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-18 Oct 2022 - 15:36:38.246 - com.zaxxer.hikari.HikariDataSource -  INFO  - HikariPool-1 - Starting...
-18 Oct 2022 - 15:36:38.495 - com.zaxxer.hikari.HikariDataSource -  INFO  - HikariPool-1 - Start completed.
-18 Oct 2022 - 15:36:38.544 - org.hibernate.dialect.Dialect -  INFO  - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
-18 Oct 2022 - 15:36:41.529 - o.h.e.t.j.p.i.JtaPlatformInitiator -  INFO  - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-18 Oct 2022 - 15:36:41.557 - o.s.o.j.LocalContainerEntityManagerFactoryBean -  INFO  - Initialized JPA EntityManagerFactory for persistence unit 'default'
-18 Oct 2022 - 15:36:42.811 - com.company.config.filter.JwtFilter -  DEBUG - Filter 'jwtFilter' configured for use
-18 Oct 2022 - 15:36:42.999 - o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration -  WARN  - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-18 Oct 2022 - 15:36:45.802 - o.s.s.web.DefaultSecurityFilterChain -  INFO  - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@33efa7d4, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@fe337, org.springframework.security.web.context.SecurityContextPersistenceFilter@5cef5fc9, org.springframework.security.web.header.HeaderWriterFilter@6d911985, org.springframework.web.filter.CorsFilter@356cb230, org.springframework.security.web.authentication.logout.LogoutFilter@34074149, com.company.config.filter.JwtFilter@5c8d631, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7b6b8cea, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@155767a7, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@50b78155, org.springframework.security.web.session.SessionManagementFilter@28effa3f, org.springframework.security.web.access.ExceptionTranslationFilter@77e1b84c, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@4bb644dc]
-18 Oct 2022 - 15:36:46.602 - o.s.b.w.e.tomcat.TomcatWebServer -  INFO  - Tomcat started on port(s): 8899 (http) with context path ''
-18 Oct 2022 - 15:36:47.454 - c.c.MyQrCodeGeneratorApplication -  INFO  - Started MyQrCodeGeneratorApplication in 14.302 seconds (JVM running for 15.588)
-18 Oct 2022 - 15:38:47.180 - o.a.c.c.C.[Tomcat].[localhost].[/] -  INFO  - Initializing Spring DispatcherServlet 'dispatcherServlet'
-18 Oct 2022 - 15:38:47.181 - o.s.web.servlet.DispatcherServlet -  INFO  - Initializing Servlet 'dispatcherServlet'
-18 Oct 2022 - 15:38:47.699 - o.s.web.servlet.DispatcherServlet -  INFO  - Completed initialization in 5 ms
-18 Oct 2022 - 15:38:47.993 - c.company.controller.AuthController -  INFO  - Authorization: AuthRequestDTO(email=alisatokaev@gmail.com, password=123456)class com.company.service.AuthService
-18 Oct 2022 - 15:39:13.481 - o.a.c.util.SessionIdGeneratorBase -  WARN  - Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [143] milliseconds.
-18 Oct 2022 - 15:39:13.523 - c.c.controller.QRCodeController -  INFO  - QRCode Create com.company.dto.request.QRCodeRequest@fb07e0dclass com.company.controller.QRCodeController
+28 May 2023 - 11:50:11.659 - o.s.o.j.LocalContainerEntityManagerFactoryBean -  INFO  - Closing JPA EntityManagerFactory for persistence unit 'default'
+28 May 2023 - 11:50:11.660 - com.zaxxer.hikari.HikariDataSource -  INFO  - HikariPool-1 - Shutdown initiated...
+28 May 2023 - 11:50:11.662 - com.zaxxer.hikari.HikariDataSource -  INFO  - HikariPool-1 - Shutdown completed.

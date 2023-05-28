@@ -27,6 +27,13 @@ public class AttachController {
         return ResponseEntity.ok(attachService.upload(file));
     }
 
+    @ApiOperation(value = "Update Attach", notes = "Method used for update Attach")
+    @PutMapping("/upload/{id}")
+    public ResponseEntity<AttachResponseDTO> update(@RequestParam("file") MultipartFile file, @PathVariable String id) {
+        log.warn("Attach update {}{}", file.getOriginalFilename(), AttachController.class);
+        return ResponseEntity.ok(attachService.update(file, id));
+    }
+
     @ApiOperation(value = "Open general", notes = "Method used for Open by id")
     @GetMapping(value = "/open-general/{id}", produces = MediaType.ALL_VALUE)
     public byte[] open_general(@PathVariable("id") String key) {

@@ -1,7 +1,7 @@
-###
+### Upload
 POST http://localhost:8899/api/v1/attach/upload
 Content-Type: multipart/form-data; boundary=WebAppBoundary
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhbGlzYXRva2FldkBnbWFpbC5jb20iLCJpYXQiOjE2NjYyNDkwMTcsImV4cCI6MTY2NjMzNTQxNywiaXNzIjoiVXNlZnVsIENvZGVzIHByb2R1Y3Rpb24ifQ.qxBqbxVLPaejNdEYsmRMsD2jkmY8hSLo2qC15n_Cs6g
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhbGlzYXRva2FldkBnbWFpbC5jb20iLCJpYXQiOjE2NjYzNDUwNzIsImV4cCI6MTY2NjQzMTQ3MiwiaXNzIjoiVXNlZnVsIENvZGVzIHByb2R1Y3Rpb24ifQ.miy6qziFF67MX9cbcyHjbmdOrOAWfPx90zVzMez_D4c
 
 --WebAppBoundary
 Content-Disposition: form-data; name="file"; filename="img0.jpg"
@@ -9,6 +9,26 @@ Content-Disposition: form-data; name="file"; filename="img0.jpg"
 < D:\Multimedia\Walpaper mix\img0.jpg
 --WebAppBoundary--
 
-###
-GET http://localhost:8899/api/v1/attach/download/717dda4b-b3dd-4212-ab90-8c411ce149b1
-#Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhbGlzYXRva2FldkBnbWFpbC5jb20iLCJpYXQiOjE2NjYyNDkwMTcsImV4cCI6MTY2NjMzNTQxNywiaXNzIjoiVXNlZnVsIENvZGVzIHByb2R1Y3Rpb24ifQ.qxBqbxVLPaejNdEYsmRMsD2jkmY8hSLo2qC15n_Cs6g
+### Update
+PUT http://localhost:8899/api/v1/attach/upload/10e664e7-bd73-4508-a0fe-92385bfcb73b
+Content-Type: multipart/form-data; boundary=WebAppBoundary
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhbGlzYXRva2FldkBnbWFpbC5jb20iLCJpYXQiOjE2NjYzNDUwNzIsImV4cCI6MTY2NjQzMTQ3MiwiaXNzIjoiVXNlZnVsIENvZGVzIHByb2R1Y3Rpb24ifQ.miy6qziFF67MX9cbcyHjbmdOrOAWfPx90zVzMez_D4c
+
+--WebAppBoundary
+Content-Disposition: form-data; name="file"; filename="img19.jpg"
+
+< D:\Multimedia\Walpaper mix\img19.jpg
+--WebAppBoundary--
+
+
+### Download
+GET http://localhost:8899/api/v1/attach/download/3d006a5b-9d38-48fc-b568-f90873eef321
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhbGlzYXRva2FldkBnbWFpbC5jb20iLCJpYXQiOjE2NjYzNDUwNzIsImV4cCI6MTY2NjQzMTQ3MiwiaXNzIjoiVXNlZnVsIENvZGVzIHByb2R1Y3Rpb24ifQ.miy6qziFF67MX9cbcyHjbmdOrOAWfPx90zVzMez_D4c
+
+
+### Open general
+GET http://localhost:8899/api/v1/attach/open-general/3d006a5b-9d38-48fc-b568-f90873eef321
+#Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhbGlzYXRva2FldkBnbWFpbC5jb20iLCJpYXQiOjE2NjYzNDUwNzIsImV4cCI6MTY2NjQzMTQ3MiwiaXNzIjoiVXNlZnVsIENvZGVzIHByb2R1Y3Rpb24ifQ.miy6qziFF67MX9cbcyHjbmdOrOAWfPx90zVzMez_D4c
+
+### Delete
+DELETE http://localhost:8899/api/v1/attach/delete/3d006a5b-9d38-48fc-b568-f90873eef321

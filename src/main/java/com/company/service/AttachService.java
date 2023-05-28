@@ -53,6 +53,20 @@ public class AttachService {
         return dto;
     }
 
+
+    public AttachResponseDTO update(MultipartFile file, String id) {
+        if (id != null) {
+            Thread thread = new Thread() {
+                @Override
+                public void run() {
+                    delete(id);
+                }
+            };
+            thread.start();
+        }
+        return upload(file);
+    }
+
     private AttachEntity saveAttach(String pathFolder, String extension, MultipartFile file) {
         AttachEntity entity = new AttachEntity();
         entity.setPath(pathFolder);
@@ -89,7 +103,7 @@ public class AttachService {
                                 "attachment; filename=\"" + entity.getOriginName() + "\"")
                         .body(resource);
             } else {
-                throw new RuntimeException("Could not read the file!");
+                throw new AppBadRequestException("File is not readable or not found !");
             }
         } catch (MalformedURLException e) {
             throw new RuntimeException(e);

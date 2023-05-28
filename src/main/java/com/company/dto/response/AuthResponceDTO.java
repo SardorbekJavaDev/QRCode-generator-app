@@ -1,6 +1,5 @@
 package com.company.dto.response;
 
-import com.company.dto.AttachSimpleDTO;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.Getter;
 import lombok.Setter;
